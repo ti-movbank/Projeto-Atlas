@@ -5,402 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Atlas - Crons e Status</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 100%);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        header h1::before {
-            content: "⏰";
-            font-size: 2.8rem;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
             max-width: 800px;
             margin: 0 auto;
-        }
-        
-        .last-updated {
-            text-align: center;
-            padding: 15px 0;
-            color: #666;
-            font-size: 0.9rem;
-            background: #f8f9fa;
-        }
-        
-        .content {
-            padding: 30px;
-        }
-        
-        .section {
-            background: #f8f9ff;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-left: 4px solid #00f2fe;
-        }
-        
-        .section h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .section h2::before {
-            font-size: 1.5rem;
-        }
-        
-        .cron-list {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .cron-item {
             padding: 20px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
+            background: #f5f5f5;
         }
-        
-        .cron-item:last-child {
-            border-bottom: none;
+        h1, h2, h3 { color: #2c3e50; }
+        .status {
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-weight: bold;
         }
-        
-        .cron-info {
-            flex: 1;
-            min-width: 250px;
+        .status.active { background: #d4edda; color: #155724; }
+        .section { 
+            background: white; 
+            padding: 20px; 
+            margin: 20px 0; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
-        .cron-title {
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 5px;
-            font-size: 1.1rem;
+        .cron-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #00f2fe;
+            border-radius: 0 4px 4px 0;
         }
-        
-        .cron-description {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-        
-        .cron-tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-        
-        .tag {
-            background: #e3f2fd;
-            color: #1565c0;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        
-        .tag.schedule {
-            background: #fff3e0;
-            color: #ef6c00;
-        }
-        
-        .tag.status {
-            background: #e8f5e8;
-            color: #2e7d32;
-        }
-        
-        .tag.status.paused {
-            background: #fff3e0;
-            color: #ff9800;
-        }
-        
-        .tag.status.error {
-            background: #ffebee;
-            color: #c62828;
-        }
-        
-        .cron-actions {
-            text-align: right;
-            min-width: 120px;
-        }
-        
-        .status-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .status-badge.active {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .status-badge.paused {
-            background: #fff3cd;
-            color: #856404;
-            border: 1px solid #ffeaa7;
-        }
-        
-        .status-badge.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        .status-badge.scheduled {
-            background: #d1ecf1;
-            color: #0c5460;
-            border: 1px solid #bee5eb;
-        }
-        
-        .how-it-works {
-            background: #e3f2fd;
-            border-radius: 15px;
-            padding: 25px;
-            margin-top: 20px;
-        }
-        
-        .how-it-works h3 {
-            color: #1565c0;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .how-it-works h3::before {
-            content: "🔧";
-            font-size: 1.3rem;
-        }
-        
-        .how-it-works ol {
-            padding-left: 25px;
-        }
-        
-        .how-it-works li {
-            margin-bottom: 10px;
-            color: #424242;
-            line-height: 1.6;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 25px;
-            color: #666;
-            font-size: 0.9rem;
-            border-top: 1px solid #eee;
-            margin-top: 30px;
-        }
-        
-        @media (max-width: 768px) {
-            .cron-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .cron-actions {
-                margin-top: 15px;
-                align-self: flex-start;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            
-            .container {
-                border-radius: 15px;
-            }
-            
-            header {
-                padding: 20px;
-            }
-            
-            header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-            
-            .section {
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-        }
+        .cron-item h3 { margin-top: 0; }
+        .last-updated { text-align: center; color: #666; font-size: 0.9em; margin: 20px 0; }
+        .footer { text-align: center; color: #666; font-size: 0.8em; margin-top: 30px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Projeto Atlas</h1>
-            <p>Monitoramento de Crons e Automações do Hermes Agent</p>
-        </header>
-        
-        \1
-            Última atualização: 02/06/2026 12:00\n        \2
-        
-        <div class="content">
-
-            <div class="section">
-                <h2>🩺 Resumo da Saúde do Sistema</h2>
-                <div style="margin-bottom: 16px; color:#424242">
-                    <ul>
-                        <li><strong>Atualizações publicadas com sucesso:</strong> Sim</li>
-                        <li><strong>Última atualização:</strong> 09:46</li>
-                        <li><strong>Jobs:</strong> 5 ativos • 0 pausados • 5 total</li>
-                        <li><strong>Custo estimado (LLM) do dia:</strong> USD 28.82</li>
-                    </ul>
-                </div>
-
-                <h2 style="margin-top: 10px; font-size: 1.1rem">🔌 Status de Integrações</h2>
-                <ul><li><strong>gmail:</strong> conectado — última sync: 2026-06-02T09:17:18.777985-03:00 ok (ok)</li><li><strong>memory:</strong> conectado — última sync: 2026-06-01T23:00:52.024188-03:00 ok (ok)</li><li><strong>news:</strong> conectado — última sync: 2026-06-02T07:15:28.010585-03:00 ok (ok)</li><li><strong>cost:</strong> conectado — última sync: 2026-06-01T18:01:29.736319-03:00 ok (ok)</li></ul>
-
-                <h2 style="margin-top: 10px; font-size: 1.1rem">🧾 Pendências</h2>
-                <div>Sem pendências.</div>
-
-                <h2 style="margin-top: 10px; font-size: 1.1rem">🛠️ Logs Técnicos Mínimos</h2>
-                <div style="margin-bottom: 10px">
-                    <div><strong>Falhas nas últimas 24h (total):</strong> 201</div>
-                </div>
-                <ul><li>other_error: 64</li><li>tool_skill_manage_error: 49</li><li>http_error: 43</li><li>tool_terminal_error: 27</li><li>traceback: 8</li><li>cron_issue: 7</li><li>rate_limit: 3</li></ul>
-                <div style="margin-top: 10px; color:#666">
-                    <strong>Último erro (reduzido):</strong> 2026-06-02 09:43:56,187 WARNING [20260602_083053_8d7011b7] agent.tool_executor: Tool patch returned error (0.00s):
-                </div>
-            </div>
-
-            <div class="section">
-                <h2>📋 Crons Ativos</h2>            <div class="section">
-                <h2>📋 Crons Ativos</h2>
-                <div class="cron-list">
-
-                <div class="cron-item">
-                    <div class="cron-info">
-                        <div class="cron-title">sync-memory-md</div>
-                        <div class="cron-tags"><span class="tag schedule">⏱️ every 30m</span> <span class="tag">🔁 ∞</span> <span class="tag status active">⚡ active</span></div>
-                        <div class="cron-description"><strong>Script:</strong> monitor_gmail_inbox.py<strong>Próxima execução:</strong> 2026-06-02T12:17:33.123053-03:00<strong>Última execução:</strong> 2026-06-02T11:47:33.123053-03:00  ok<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)</div>
-                    </div>
-                    <div class="cron-actions"><span class="status-badge active">active</span></div>
+    <h1>Projeto Atlas</h1>
+    <p>Monitoramento de Crons e Automações do Hermes Agent</p>
+    
+    <div class="last-updated">Última atualização: 02/06/2026 16:38</div>
+    
+    <div class="section">
+        <h2>🩺 Resumo da Saúde do Sistema</h2>
+        <p><strong>Atualizações publicadas com sucesso:</strong> Sim</p>
+        <p><strong>Última atualização:</strong> 09:46</p>
+        <p><strong>Jobs:</strong> 5 ativos • 0 pausados • 5 total</p>
+        <p><strong>Custo estimado (LLM) do dia:</strong> USD 28.82</p>
+    </div>
+    
+    <div class="section">
+        <h2>📋 Crons Ativos</h2>
+                        <div class="cron-item">
+                    <h3>Monitorar novos e-mails na caixa de entrada</h3>
+                    <p><strong>Schedule:</strong> every 30m</p>
+                    <p><strong>Script:</strong> monitor_gmail_inbox.py</p>
+                    <p><strong>Status:</strong> <span class="status active">active</span></p>
+                    <p><strong>Next:</strong> 2026-06-02T12:17:33.123053-03:00</p>
+                    <p><strong>Last:</strong> 2026-06-02T11:47:33.123053-03:00 (ok)</p>
+                    <p><strong>Delivery:</strong> origin</p>
                 </div>
 
                 <div class="cron-item">
-                    <div class="cron-info">
-                        <div class="cron-title">Daily Cost Report via Skill</div>
-                        <div class="cron-tags"><span class="tag schedule">⏱️ 0 23 * * *</span> <span class="tag">🔁 ∞</span> <span class="tag status active">⚡ active</span></div>
-                        <div class="cron-description"><strong>Script:</strong> sync_memory.sh<strong>Próxima execução:</strong> 2026-06-02T23:00:00-03:00<strong>Última execução:</strong> 2026-06-01T23:00:52.024188-03:00  ok<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)</div>
-                    </div>
-                    <div class="cron-actions"><span class="status-badge active">active</span></div>
+                    <h3>sync-memory-md</h3>
+                    <p><strong>Schedule:</strong> 0 23 * * *</p>
+                    <p><strong>Script:</strong> sync_memory.sh</p>
+                    <p><strong>Status:</strong> <span class="status active">active</span></p>
+                    <p><strong>Next:</strong> 2026-06-02T23:00:00-03:00</p>
+                    <p><strong>Last:</strong> 2026-06-01T23:00:52.024188-03:00 (ok)</p>
+                    <p><strong>Delivery:</strong> origin</p>
                 </div>
 
                 <div class="cron-item">
-                    <div class="cron-info">
-                        <div class="cron-title">Atualizar Notícias Fiscais</div>
-                        <div class="cron-tags"><span class="tag schedule">⏱️ 0 18 * * *</span> <span class="tag">🔁 ∞</span> <span class="tag status active">⚡ active</span></div>
-                        <div class="cron-description"><strong>Script:</strong> update_crons_page.py<strong>Próxima execução:</strong> 2026-06-02T18:00:00-03:00<strong>Última execução:</strong> 2026-06-01T18:01:29.736319-03:00  ok<strong>Entrega:</strong> all<strong>Modo:</strong> no-agent (script stdout delivered directly)</div>
-                    </div>
-                    <div class="cron-actions"><span class="status-badge active">active</span></div>
+                    <h3>Daily Cost Report via Skill</h3>
+                    <p><strong>Schedule:</strong> 0 18 * * *</p>
+                    <p><strong>Skill:</strong> daily-cost-report</p>
+                    <p><strong>Status:</strong> <span class="status active">active</span></p>
+                    <p><strong>Next:</strong> 2026-06-02T18:00:00-03:00</p>
+                    <p><strong>Last:</strong> 2026-06-01T18:01:29.736319-03:00 (ok)</p>
+                    <p><strong>Delivery:</strong> all</p>
                 </div>
 
                 <div class="cron-item">
-                    <div class="cron-info">
-                        <div class="cron-title">Atualizar página de Crons (00h/06h/12h/18h)</div>
-                        <div class="cron-tags"><span class="tag schedule">⏱️ 0 7,17 * * *</span> <span class="tag">🔁 ∞</span> <span class="tag status active">⚡ active</span></div>
-                        <div class="cron-description"><strong>Script:</strong> monitor_gmail_inbox.py<strong>Próxima execução:</strong> 2026-06-02T12:17:33.123053-03:00<strong>Última execução:</strong> 2026-06-02T11:47:33.123053-03:00  ok<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Próxima execução:</strong> 2026-06-02T17:00:00-03:00<strong>Última execução:</strong> 2026-06-02T07:15:28.010585-03:00  ok<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)</div>
-                    </div>
-                    <div class="cron-actions"><span class="status-badge active">active</span></div>
+                    <h3>Atualizar Notícias Fiscais</h3>
+                    <p><strong>Schedule:</strong> 0 7,17 * * *</p>
+                    <p><strong>Skill:</strong> fiscal-news-fetcher</p>
+                    <p><strong>Status:</strong> <span class="status active">active</span></p>
+                    <p><strong>Next:</strong> 2026-06-02T17:00:00-03:00</p>
+                    <p><strong>Last:</strong> 2026-06-02T07:15:28.010585-03:00 (ok)</p>
+                    <p><strong>Delivery:</strong> origin</p>
                 </div>
 
                 <div class="cron-item">
-                    <div class="cron-info">
-                        <div class="cron-title">sync-memory-md</div>
-                        <div class="cron-tags"><span class="tag schedule">⏱️ 0 0,6,12,18 * * *</span> <span class="tag">🔁 ∞</span> <span class="tag status active">⚡ active</span></div>
-                        <div class="cron-description"><strong>Script:</strong> sync_memory.sh<strong>Próxima execução:</strong> 2026-06-02T23:00:00-03:00<strong>Última execução:</strong> 2026-06-01T23:00:52.024188-03:00  ok<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Próxima execução:</strong> 2026-06-02T18:00:00-03:00<strong>Última execução:</strong> 2026-06-02T11:47:33.123053-03:00  ok<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)</div>
-                    </div>
-                    <div class="cron-actions"><span class="status-badge active">active</span></div>
+                    <h3>Atualizar página de Crons (00h/06h/12h/18h)</h3>
+                    <p><strong>Schedule:</strong> 0 0,6,12,18 * * *</p>
+                    <p><strong>Script:</strong> update_crons_page.py</p>
+                    <p><strong>Status:</strong> <span class="status active">active</span></p>
+                    <p><strong>Next:</strong> 2026-06-02T18:00:00-03:00</p>
+                    <p><strong>Delivery:</strong> origin</p>
                 </div>
-
-                <div class="cron-item">
-                    <div class="cron-info">
-                        <div class="cron-title">Daily Cost Report via Skill</div>
-                        <div class="cron-tags"><span class="tag schedule">⏱️ every 30m</span> <span class="tag">🔁 ∞</span> <span class="tag status active">⚡ active</span></div>
-                        <div class="cron-description"><strong>Script:</strong> update_crons_page.py<strong>Próxima execução:</strong> 2026-06-02T18:00:00-03:00<strong>Última execução:</strong> 2026-06-01T18:01:29.736319-03:00  ok<strong>Entrega:</strong> all<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Próxima execução:</strong> 2026-06-02T12:17:33.123053-03:00<strong>Última execução:</strong> 2026-06-02T11:47:33.123053-03:00  ok<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Última execução:</strong> 2026-06-01T23:00:52.024188-03:00  ok<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Modo:</strong> no-agent (script stdout delivered directly)</div>
-                    </div>
-                    <div class="cron-actions"><span class="status-badge active">active</span></div>
-                </div>
-
-                <div class="cron-item">
-                    <div class="cron-info">
-                        <div class="cron-title">Atualizar Notícias Fiscais</div>
-                        <div class="cron-tags"><span class="tag schedule">⏱️ 0 23 * * *</span> <span class="tag">🔁 ∞</span> <span class="tag status active">⚡ active</span></div>
-                        <div class="cron-description"><strong>Próxima execução:</strong> 2026-06-02T23:00:00-03:00<strong>Última execução:</strong> 2026-06-01T23:00:52.024188-03:00  ok<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Última execução:</strong> 2026-06-01T18:01:29.736319-03:00  ok<strong>Entrega:</strong> all<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Entrega:</strong> origin<strong>Modo:</strong> no-agent (script stdout delivered directly)</div>
-                    </div>
-                    <div class="cron-actions"><span class="status-badge active">active</span></div>
-                </div>
-
-                <div class="cron-item">
-                    <div class="cron-info">
-                        <div class="cron-title">Atualizar página de Crons (00h/06h/12h/18h)</div>
-                        <div class="cron-tags"><span class="tag schedule">⏱️ 0 18 * * *</span> <span class="tag">🔁 ∞</span> <span class="tag status active">⚡ active</span></div>
-                        <div class="cron-description"><strong>Próxima execução:</strong> 2026-06-02T18:00:00-03:00<strong>Última execução:</strong> 2026-06-01T18:01:29.736319-03:00  ok<strong>Entrega:</strong> all<strong>Modo:</strong> no-agent (script stdout delivered directly)<strong>Última execução:</strong> 2026-06-02T07:15:28.010585-03:00  ok<strong>Entrega:</strong> origin<strong>Entrega:</strong> all<strong>Modo:</strong> no-agent (script stdout delivered directly)</div>
-                    </div>
-                    <div class="cron-actions"><span class="status-badge active">active</span></div>
-                </div>
-
-                </div>
-            </div>
+    </div>
+    
 <div class="section">
                 <h2>📚 Skills Disponíveis</h2>
                 <div style="margin-bottom: 20px;">
@@ -827,6 +533,9 @@
 
 <p>Nenhuma skill disponível.</p>
 <p>Nenhuma skill disponível.</p>
+
+
+
             <div class="section">
                 <h2>⚙️ Como Funciona</h2>
                 <div class="how-it-works">
@@ -853,6 +562,42 @@
         <div class="footer">
             Projeto Atlas • Hermes Agent • Sistema de monitoramento e automação contábil/fiscal
         </div>
+    </div>
+</body>
+</html>        </div>
+        
+        <div class="footer">
+            Projeto Atlas • Hermes Agent • Sistema de monitoramento e automação contábil/fiscal
+        </div>
+    </div>
+</body>
+</html>        </div>
+        
+        <div class="footer">
+            Projeto Atlas • Hermes Agent • Sistema de monitoramento e automação contábil/fiscal
+        </div>
+    </div>
+</body>
+</html>
+        </div>
+        
+        <div class="footer">
+            Projeto Atlas • Hermes Agent • Sistema de monitoramento e automação contábil/fiscal
+        </div>
+    </div>
+</body>
+</html>
+        </div>
+        
+        <div class="footer">
+            Projeto Atlas • Hermes Agent • Sistema de monitoramento e automação contábil/fiscal
+        </div>
+    </div>
+</body>
+</html>
+    
+    <div class="footer">
+        Projeto Atlas • Hermes Agent • Sistema de monitoramento e automação contábil/fiscal
     </div>
 </body>
 </html>

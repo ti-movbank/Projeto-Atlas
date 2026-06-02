@@ -1,0 +1,31 @@
+{
+  "termo_buscado": "As 5 principais noticias do mundo fiscal e contabil no brasil",
+  "data_busca": "01/06/2026 21:24",
+  "resultados": [
+    {
+      "titulo": "Saída do país sem caráter definitivo não muda residência fiscal",
+      "resumo": "A Receita Federal confirma que a saída temporária do país sem caráter definitivo não altera a residência fiscal do contribuinte, mantendo suas obrigações tributárias no Brasil.",
+      "link": "https://www.portalcontabeis.com.br/noticia/saida-do-pais-sem-carater-definitivo-nao-muda-residencia-fiscal"
+    },
+    {
+      "titulo": "Alexandre de Moraes manda prender contador por suspeita de violar sigilo fiscal",
+      "resumo": "Ministro do STF Alexandre de Moraes determina prisão preventiva de contador suspeito de violar sigilo fiscal ao divulgar informações de investigações em andamento.",
+      "link": "https://exame.com/brasil/alexandre-de-moraes-prende-contador-suspeito-de-violar-sigilo-fiscal/"
+    },
+    {
+      "titulo": "Riscos de autuação fiscal aumentam com dados cruzados em 2026",
+      "resumo": "Especialistas alertam que o aumento do compartilhamento de dados entre órgãos governamentais em 2026 elevará significativamente os riscos de autuação fiscal para empresas e contribuintes.",
+      "link": "https://www.contadores.cnt.br/noticia/riscos-de-autuacao-fiscal-aumentam-com-dados-cruzados-em-2026"
+    },
+    {
+      "titulo": "IFRS 18: contabilidade brasileira ignora mudança estrutural",
+      "resumo": "Apesar da implementação iminente do IFRS 18, muitas empresas brasileiras ainda não estão preparadas para as mudanças estruturais que o novo padrão contábil trará nas demonstrações financeiras.",
+      "link": "https://www.portalcontabeis.com.br/noticia/ifrs-18-contabilidade-brasileira-ignora-mudanca-estrutural"
+    },
+    {
+      "titulo": "Especialistas criticam pacote de socorro fora da meta fiscal: ‘Contabilidade criativa’",
+      "resumo": "Economistas e contadores criticam as medidas do governo que fogem da meta fiscal, caracterizando algumas práticas como 'contabilidade criativa' que podem gerar distorções nas contas públicas.",
+      "link": "https://economia.estadao.com.br/noticias/geral,especialistas-criticam-pacote-de-socorro-fora-da-meta-fiscal-contabilidade-criativa,70001234567"
+    }
+  ]
+}

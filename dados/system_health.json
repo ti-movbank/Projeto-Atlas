@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-06-02 09:46",
+  "updated_at": "2026-06-02 12:00",
   "public_health": {
     "atualizacoes_publicadas_com_sucesso": true,
     "quantos_jobs_ativos": 5,
     "quantos_jobs_ativados_e_parados": 0,
     "quantos_jobs_total": 5,
-    "ultima_atualizacao_hhmm": "09:46",
-    "custo_total_estimado_usd_do_dia": 28.823332687500002
+    "ultima_atualizacao_hhmm": "12:00",
+    "custo_total_estimado_usd_do_dia": 28.7295164125
   },
   "integracoes": {
     "integrations": {
       "gmail": {
         "state": "conectado",
-        "last_run": "2026-06-02T09:17:18.777985-03:00  ok",
+        "last_run": "2026-06-02T11:47:33.123053-03:00  ok",
         "paused": false
       },
       "memory": {
@@ -34,16 +34,16 @@
     "pendencias": []
   },
   "logs_minimos": {
-    "falhas_ultimas_24h": 201,
+    "falhas_ultimas_24h": 158,
     "por_tipo": {
-      "other_error": 64,
-      "traceback": 8,
+      "other_error": 20,
       "http_error": 43,
-      "tool_terminal_error": 27,
-      "rate_limit": 3,
-      "tool_skill_manage_error": 49,
-      "cron_issue": 7
+      "traceback": 8,
+      "cron_issue": 8,
+      "tool_skill_manage_error": 56,
+      "tool_terminal_error": 22,
+      "rate_limit": 1
     },
-    "ultimo_erro": "2026-06-02 09:43:56,187 WARNING [20260602_083053_8d7011b7] agent.tool_executor: Tool patch returned error (0.00s): {\"error\": \"patch content "
+    "ultimo_erro": "2026-06-02 11:27:05,384 WARNING [20260602_094314_565a8c] agent.tool_executor: Tool skill_manage returned error (0.01s): {\"success\": false, \""
   }
 }

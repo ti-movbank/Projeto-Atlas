@@ -1,0 +1,49 @@
+{
+  "updated_at": "2026-06-02 09:38",
+  "public_health": {
+    "atualizacoes_publicadas_com_sucesso": true,
+    "quantos_jobs_ativos": 5,
+    "quantos_jobs_ativados_e_parados": 0,
+    "quantos_jobs_total": 5,
+    "ultima_atualizacao_hhmm": "09:38",
+    "custo_total_estimado_usd_do_dia": null
+  },
+  "integracoes": {
+    "integrations": {
+      "gmail": {
+        "state": "conectado",
+        "last_run": "2026-06-02T09:17:18.777985-03:00  ok",
+        "paused": false
+      },
+      "memory": {
+        "state": "conectado",
+        "last_run": "2026-06-01T23:00:52.024188-03:00  ok",
+        "paused": false
+      },
+      "news": {
+        "state": "conectado",
+        "last_run": "2026-06-02T07:15:28.010585-03:00  ok",
+        "paused": false
+      },
+      "cost": {
+        "state": "conectado",
+        "last_run": "2026-06-01T18:01:29.736319-03:00  ok",
+        "paused": false
+      }
+    },
+    "pendencias": []
+  },
+  "logs_minimos": {
+    "falhas_ultimas_24h": 210,
+    "por_tipo": {
+      "other_error": 75,
+      "traceback": 7,
+      "http_error": 43,
+      "tool_terminal_error": 26,
+      "rate_limit": 3,
+      "tool_skill_manage_error": 49,
+      "cron_issue": 7
+    },
+    "ultimo_erro": "2026-06-02 09:34:49,919 WARNING [20260602_083053_8d7011b7] agent.tool_executor: Tool read_file returned error (0.07s): {\"content\": \"\", \"tota"
+  }
+}

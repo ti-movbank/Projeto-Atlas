@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Notícias - Projeto Atlas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        header h1::before {
+            content: "📚";
+            font-size: 2.8rem;
+        }
+        
+        .breadcrumb {
+            background: #f8f9ff;
+            padding: 15px 30px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: #1565c0;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            color: #999;
+        }
+        
+        .history-container {
+            padding: 30px;
+        }
+        
+        .history-date-section {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .history-date-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .history-date-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .history-date-header h2 {
+            color: #1565c0;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .history-date-header h2::before {
+            content: "📅";
+        }
+        
+        .history-date-header .news-count {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .news-card {
+            background: #f8f9ff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            border-color: #00f2fe;
+        }
+        
+        .news-header {
+            background: linear-gradient(to bottom, #e3f2fd, white);
+            padding: 20px;
+            border-bottom: 1px solid #bbdefb;
+        }
+        
+        .news-header h3 {
+            color: #1565c0;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .news-header h3::before {
+            content: "📰";
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .news-meta span {
+            background: #e3f2fd;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-weight: 500;
+        }
+        
+        .news-meta .fonte {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+        
+        .news-meta .hora {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        
+        .news-resumo {
+            padding: 0 20px 20px;
+            color: #424242;
+            line-height: 1.7;
+        }
+        
+        .news-link {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 20px;
+            padding: 10px 25px;
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        }
+        
+        .news-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+            background: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .history-date-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                Histórico de Notícias Fiscais e Contábeis
+            </h1>
+        </header>
+        
+        <div class="breadcrumb">
+            <a href="index.html">← Voltar para as Notícias de Hoje</a>
+            <span>></span>
+            <span>Histórico de Notícias (7 dias)</span>
+        </div>
+        
+        <div class="history-container">
+            <div id="history-content">
+                <!-- History content will be loaded here by JavaScript -->
+            </div>
+        </div>
+        
+        <footer>
+            <p>Última atualização: <span id="last-update">Carregando...</span></p>
+            <p>Projeto Atlas - Sistema de Notícias Fiscais e Contábeis</p>
+        </footer>
+    </div>
+
+    <script>
+        // Function to format date for display (DD/MM/YYYY)
+        function formatDisplayDate(dateString) {
+            const [year, month, day] = dateString.split('-');
+            return `${day}/${month}/${year}`;
+        }
+        
+        // Function to format time for display (HH:MM)
+        function formatTime(dateString) {
+            // Assuming dateString is in format "DD/MM/YYYY HH:MM"
+            const parts = dateString.split(' ');
+            if (parts.length > 1) {
+                return parts[1]; // Return HH:MM part
+            }
+            return dateString;
+        }
+        
+        // Fetch and display historical news
+        fetch('./dados/historico.json?t=' + Date.now())
+            .then(response => {
+                if (!response.ok) throw new Error('HTTP error! status: ' + response.status);
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('last-update').textContent = 
+                    new Date().toLocaleString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+                
+                const historyContent = document.getElementById('history-content');
+                
+                if (Object.keys(data).length === 0) {
+                    historyContent.innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📭</div>
+                            <h3>Nenhum histórico disponível</h3>
+                            <p>O histórico de notícias será preenchido conforme as atualizações forem realizadas.</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                // Sort dates in descending order (newest first)
+                const sortedDates = Object.keys(data).sort((a, b) => new Date(b) - new Date(a));
+                
+                let html = '';
+                
+                sortedDates.forEach(date => {
+                    const newsItems = data[date];
+                    const formattedDate = formatDisplayDate(date);
+                    
+                    html += `
+                        <div class="history-date-section">
+                            <div class="history-date-header">
+                                <h2>${formattedDate}</h2>
+                                <div class="news-count">${newsItems.length} notícias</div>
+                            </div>
+                            <div class="news-grid">
+                    `;
+                    
+                    newsItems.forEach(item => {
+                        html += `
+                            <div class="news-card">
+                                <div class="news-header">
+                                    <h3>${item.titulo}</h3>
+                                </div>
+                                <div class="news-meta">
+                                    <span class="fonte">📰 ${item.fonte}</span>
+                                    <span class="hora">🕐 ${item.hora_postada ? formatTime(item.hora_postada) : 'Horário não disponível'}</span>
+                                </div>
+                                <div class="news-resumo">
+                                    ${item.resumo}
+                                </div>
+                                <a href="${item.link}" target="_blank" rel="noopener" class="news-link">
+                                    Ler notícia completa
+                                </a>
+                            </div>
+                        `;
+                    });
+                    
+                    html += `</div></div>`;
+                });
+                
+                historyContent.innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching history:', error);
+                document.getElementById('history-content').innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">⚠️</div>
+                        <h3>Erro ao carregar histórico</h3>
+                        <p>Verifique sua conexão ou tente novamente em alguns minutos.</p>
+                    </div>
+                `;
+            });
+    </script>
+</body>
+</html>

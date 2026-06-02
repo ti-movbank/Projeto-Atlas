@@ -1,41 +1,48 @@
 {
   "termo_buscado": "Notícias fiscais e contábeis do Brasil - Atualização diária",
-  "data_busca": "01/06/2026 22:31",
+  "data_busca": "02/06/2026 07:12",
   "resultados": [
     {
       "titulo": "Reforma tributária avança no Senado com novas regras para empresas",
       "resumo": "O Senado Federal aprovou em primeira votação mudanças na reforma tributária que impactam diretamente o regime de apuração de impostos para empresas de todos os tamanhos.",
       "fonte": "Valor Econômico",
-      "hora_postada": "02/06/2026 08:30",
+      "hora_postada": "02/06/2026 07:00",
       "link": "https://valor.globo.com/economia/noticia/reforma-tributaria-avanca-no-senado-com-novas-regras-para-empresas.ghtml"
     },
     {
       "titulo": "Receita Federal alerta para golpes envolvendo falsos restituições do IRPF 2026",
       "resumo": "Contribuintes são orientados a não clicar em links suspeitos recebidos por e-mail ou SMS prometendo agilizar a restituição do imposto de renda deste ano.",
       "fonte": "Portal Contábeis",
-      "hora_postada": "02/06/2026 07:15",
+      "hora_postada": "02/06/2026 06:00",
       "link": "https://www.contabeis.com.br/noticia/receita-federal-alerta-para-golpes-envolvendo-falsos-restituicoes-do-irpf-2026"
     },
     {
       "titulo": "STF julga ação sobre incidência de ICMS em operações com cartões de crédito",
       "resumo": "O Supremo Tribunal Federal começa a julgar hoje a ação que discute se operações com cartões de crédito devem ou não sofrer incidência do imposto sobre circulação de mercadorias e serviços.",
       "fonte": "Exame",
-      "hora_postada": "02/06/2026 09:00",
+      "hora_postada": "02/06/2026 05:00",
       "link": "https://exame.com/brasil/stf-julga-acao-sobre-incidencia-de-icms-em-operacoes-com-cartoes-de-credito/"
     },
     {
       "titulo": "Novo cálculo do FGTS passa a valer a partir de julho impactando rescisões",
       "resumo": "Mudança na fórmula de cálculo do saldo do FGTS será implementada a partir de 1º de julho, afetando empresas que precisam fazer rescisões de contrato neste período.",
       "fonte": "Jornal Contábil",
-      "hora_postada": "02/06/2026 06:45",
+      "hora_postada": "02/06/2026 04:00",
       "link": "https://www.jornalcontabil.com.br/noticia/novo-calculo-do-fgts-passa-a-valer-a-partir-de-julho"
     },
     {
       "titulo": "Contadores têm até 30 de junho para entregar a ECF referente ao ano de 2025",
       "resumo": "Prazo final para entrega da Escrituração Contábil Fiscal (ECF) relativa ao ano-base de 2025 se aproxima, com multas previstas para entregas fora do prazo.",
       "fonte": "Receita Federal",
-      "hora_postada": "02/06/2026 10:00",
+      "hora_postada": "02/06/2026 03:00",
       "link": "https://www.gov.br/receitafederal/pt-br/assuntos/contabilidade-e-tributacao/escrituracoes-digitais"
+    },
+    {
+      "titulo": "PF prende suspeitos de fraude em contratos de licitação no valor de R$ 50 milhões",
+      "resumo": "Operação da Polícia Federal desmonta esquema de superfaturamento em contratos públicos envolvendo empresas de médio porte.",
+      "fonte": "Exame",
+      "hora_postada": "02/06/2026 02:00",
+      "link": "https://exame.com/brasil/pf-prende-suspeitos-fraude-contratos-licitacao/"
     }
   ]
 }

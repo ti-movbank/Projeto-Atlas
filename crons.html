@@ -5,41 +5,321 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Atlas - Crons e Status</title>
     <style>
-        body { font-family: sans-serif; margin: 40px; background: #f4f4f9; color: #333; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .card { background: white; padding: 20px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; }
-        h2 { color: #3498db; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .cron-item { background: #ecf0f1; padding: 15px; margin: 10px 0; border-radius: 5px; }
-        .cron-title { font-weight: bold; color: #2c3e50; }
-        .cron-schedule { color: #7f8c8d; font-size: 0.9em; }
-        .cron-status { font-weight: bold; }
-        .status-ok { color: #27ae60; }
-        .status-error { color: #e74c3c; }
-        .status-paused { color: #f39c12; }
-        .status-scheduled { color: #3498db; }
-        .timestamp { color: #95a5a6; font-size: 0.85em; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        header h1::before {
+            content: "⏰";
+            font-size: 2.8rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .last-updated {
+            text-align: center;
+            padding: 15px 0;
+            color: #666;
+            font-size: 0.9rem;
+            background: #f8f9fa;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            background: #f8f9ff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid #00f2fe;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h2::before {
+            font-size: 1.5rem;
+        }
+        
+        .cron-list {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .cron-item {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        
+        .cron-item:last-child {
+            border-bottom: none;
+        }
+        
+        .cron-info {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .cron-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .cron-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .cron-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        
+        .tag {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .tag.schedule {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+        
+        .tag.status {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        
+        .tag.status.paused {
+            background: #fff3e0;
+            color: #ff9800;
+        }
+        
+        .tag.status.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .cron-actions {
+            text-align: right;
+            min-width: 120px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .status-badge.active {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status-badge.paused {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .status-badge.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status-badge.scheduled {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        .how-it-works {
+            background: #e3f2fd;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+        
+        .how-it-works h3 {
+            color: #1565c0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .how-it-works h3::before {
+            content: "🔧";
+            font-size: 1.3rem;
+        }
+        
+        .how-it-works ol {
+            padding-left: 25px;
+        }
+        
+        .how-it-works li {
+            margin-bottom: 10px;
+            color: #424242;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .cron-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .cron-actions {
+                margin-top: 15px;
+                align-self: flex-start;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 15px;
+            }
+            
+            header {
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Projeto Atlas - Crons e Status</h1>
-        <p><em>Última atualização: 01/06/2026 21:24</em></p>
+        <header>
+            <h1>Projeto Atlas</h1>
+            <p>Monitoramento de Crons e Automações do Hermes Agent</p>
+        </header>
         
-        <div class="card">
-            <h2>Crons Ativos</h2>
-            <pre>Comando cronjob não disponível</pre>
+        <div class="last-updated">
+            Última atualização: 01/06/2026 22:31
         </div>
         
-        <div class="card">
-            <h2>Próximas Execuções</h2>
-            <p>Informações detalhadas sobre agendamento disponíveis na seção acima.</p>
+        <div class="content">
+            <div class="section">
+                <h2>📋 Crons Ativos</h2>
+                <div class="cron-list">
+Erro ao obter informações dos crons
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>⚙️ Como Funciona</h2>
+                <div class="how-it-works">
+                    <h3>Processo de Atualização Automática</h3>
+                    <ol>
+                        <li>O Hermes Agent executa tarefas agendadas (cron jobs) em horários pré-definidos</li>
+                        <li>Cada cron job coleta informações específicas do sistema ou executa tarefas solicitadas</li>
+                        <li>Os resultados são processados e formatados para exibição web</li>
+                        <li>As atualizações são commitadas e enviadas automaticamente para o repositório GitHub</li>
+                        <li>O GitHub Pages publica as alterações em tempo real, disponíveis para acesso público</li>
+                    </ol>
+                    <p><strong>Vantagem:</strong> Você acessa as informações atualizadas sem precisar de senhas, túneis ou acesso direto ao servidor.</p>
+                </div>
+            </div>
         </div>
         
-        <div class="card">
-            <h2>Como Funciona</h2>
-            <p>Esta página é atualizada automaticamente pelo Hermes Agent através de cron jobs que coletam informações do sistema e as disponibilizam aqui para consulta pública.</p>
-            <p>O Hermes Agent está configurado para executar tarefas de contabilidade, fiscalidade e automações conforme solicitado.</p>
+        <div class="footer">
+            Projeto Atlas • Hermes Agent • Sistema de monitoramento e automação contábil/fiscal
         </div>
     </div>
 </body>

@@ -3,46 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Atlas - Hermes</title>
+    <title>Projeto Atlas - Hermes Fiscal</title>
     <style>
-        body { font-family: sans-serif; margin: 40px; background: #f4f4f9; color: #333; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .card { background: white; padding: 20px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; }
-        .status { color: #7f8c8d; font-style: italic; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        header h1::before {
+            content: "📊";
+            font-size: 2.8rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .search-info {
+            background: #f8f9fa;
+            border-left: 4px solid #00f2fe;
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .search-info strong {
+            color: #2c3e50;
+        }
+        
+        .news-container {
+            padding: 30px;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .news-card {
+            background: #f8f9ff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            border-color: #00f2fe;
+        }
+        
+        .news-header {
+            background: linear-gradient(to bottom, #e3f2fd, white);
+            padding: 20px;
+            border-bottom: 1px solid #bbdefb;
+        }
+        
+        .news-header h3 {
+            color: #1565c0;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .news-header h3::before {
+            content: "📰";
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .news-meta span {
+            background: #e3f2fd;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-weight: 500;
+        }
+        
+        .news-meta .fonte {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+        
+        .news-meta .hora {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        
+        .news-resumo {
+            padding: 0 20px 20px;
+            color: #424242;
+            line-height: 1.7;
+        }
+        
+        .news-link {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 20px;
+            padding: 10px 25px;
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+        }
+        
+        .news-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+            background: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+        }
+        
+        .loading, .error, .empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            grid-column: 1 / -1;
+        }
+        
+        .loading::before {
+            content: "🔄";
+            display: block;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+        }
+        
+        .footer::before {
+            content: "🔄";
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+        
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 15px;
+            }
+            
+            header {
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .news-container {
+                padding: 20px;
+            }
+            
+            .news-card {
+                margin-bottom: 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Projeto Atlas</h1>
-        <div id="info-busca" class="status">Aguardando dados do Hermes...</div>
-        <hr>
-        <div id="lista-resultados">Nenhuma busca ativa no momento.</div>
+        <header>
+            <h1>Projeto Atlas</h1>
+            <p>Atualizações diárias de notícias fiscais e contábeis do Brasil</p>
+        </header>
+        
+        <div class="search-info">
+            <strong>Última atualização:</strong> <span id="data-atualizacao">Carregando...</span> | 
+            <strong>Termo buscado:</strong> <span id="termo-buscado">Notícias fiscais e contábeis</span>
+        </div>
+        
+        <div class="news-container">
+            <div id="lista-resultados" class="news-grid">
+                <div class="loading">
+                    Carregando notícias fiscais...
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Projeto Atlas • Hermes Agent • Dados atualizados automaticamente via GitHub Pages
+        </div>
     </div>
 
     <script>
-        // Esse script vai tentar ler o arquivo de dados automaticamente toda vez que você abrir a página
+        // Function to format date for display
+        function formatDate(dateString) {
+            const options = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+            return new Date(dateString).toLocaleString('pt-BR', options);
+        }
+
+        // Fetch and display news
         fetch('./dados/resultado.json?t=' + Date.now())
             .then(response => {
-                if (!response.ok) throw new Error('Sem buscas ativas');
+                if (!response.ok) throw new Error('HTTP error! status: ' + response.status);
                 return response.json();
             })
             .then(data => {
-                document.getElementById('info-busca').innerHTML = `<strong>Termo buscado:</strong> ${data.termo_buscado} | <strong>Data:</strong> ${data.data_busca}`;
+                document.getElementById('data-atualizacao').textContent = formatDate(data.data_busca);
+                document.getElementById('termo-buscado').textContent = data.termo_buscado;
                 
-                let html = '';
-                data.resultados.forEach(item => {
-                    html += `
-                        <div class="card">
-                            <h3><a href="${item.link}" target="_blank">${item.titulo}</a></h3>
-                            <p>${item.resumo}</p>
-                        </div>
-                    `;
-                });
-                document.getElementById('lista-resultados').innerHTML = html;
+                const container = document.getElementById('lista-resultados');
+                
+                if (data.resultados && data.resultados.length > 0) {
+                    container.innerHTML = '';
+                    
+                    data.resultados.forEach(item => {
+                        const card = document.createElement('div');
+                        card.className = 'news-card';
+                        
+                        // Format the posting time
+                        const postedTime = item.hora_postada ? 
+                            item.hora_postada : 
+                            new Date().toLocaleString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+                        
+                        card.innerHTML = `
+                            <div class="news-header">
+                                <h3>${item.titulo}</h3>
+                            </div>
+                            <div class="news-meta">
+                                <span class="fonte">📰 ${item.fonte}</span>
+                                <span class="hora">🕐 ${postedTime}</span>
+                            </div>
+                            <div class="news-resumo">
+                                ${item.resumo}
+                            </div>
+                            <a href="${item.link}" target="_blank" rel="noopener" class="news-link">
+                                Ler notícia completa
+                            </a>
+                        `;
+                        
+                        container.appendChild(card);
+                    });
+                } else {
+                    container.innerHTML = '<div class="empty">Nenhuma notícia encontrada para o termo buscado.</div>';
+                }
             })
             .catch(error => {
-                document.getElementById('lista-resultados').innerHTML = '<p>Pronto para receber buscas! O arquivo "dados/resultado.json" ainda não foi criado pelo Hermes.</p>';
+                console.error('Error fetching news:', error);
+                document.getElementById('lista-resultados').innerHTML = `
+                    <div class="error">
+                        <strong>Erro ao carregar notícias</strong><br>
+                        Verifique sua conexão ou tente novamente em alguns minutos.
+                    </div>
+                `;
             });
     </script>
 </body>

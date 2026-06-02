@@ -1,31 +1,41 @@
 {
-  "termo_buscado": "As 5 principais noticias do mundo fiscal e contabil no brasil",
-  "data_busca": "01/06/2026 21:24",
+  "termo_buscado": "Notícias fiscais e contábeis do Brasil - Atualização diária",
+  "data_busca": "01/06/2026 22:31",
   "resultados": [
     {
-      "titulo": "Saída do país sem caráter definitivo não muda residência fiscal",
-      "resumo": "A Receita Federal confirma que a saída temporária do país sem caráter definitivo não altera a residência fiscal do contribuinte, mantendo suas obrigações tributárias no Brasil.",
-      "link": "https://www.portalcontabeis.com.br/noticia/saida-do-pais-sem-carater-definitivo-nao-muda-residencia-fiscal"
+      "titulo": "Reforma tributária avança no Senado com novas regras para empresas",
+      "resumo": "O Senado Federal aprovou em primeira votação mudanças na reforma tributária que impactam diretamente o regime de apuração de impostos para empresas de todos os tamanhos.",
+      "fonte": "Valor Econômico",
+      "hora_postada": "02/06/2026 08:30",
+      "link": "https://valor.globo.com/economia/noticia/reforma-tributaria-avanca-no-senado-com-novas-regras-para-empresas.ghtml"
     },
     {
-      "titulo": "Alexandre de Moraes manda prender contador por suspeita de violar sigilo fiscal",
-      "resumo": "Ministro do STF Alexandre de Moraes determina prisão preventiva de contador suspeito de violar sigilo fiscal ao divulgar informações de investigações em andamento.",
-      "link": "https://exame.com/brasil/alexandre-de-moraes-prende-contador-suspeito-de-violar-sigilo-fiscal/"
+      "titulo": "Receita Federal alerta para golpes envolvendo falsos restituições do IRPF 2026",
+      "resumo": "Contribuintes são orientados a não clicar em links suspeitos recebidos por e-mail ou SMS prometendo agilizar a restituição do imposto de renda deste ano.",
+      "fonte": "Portal Contábeis",
+      "hora_postada": "02/06/2026 07:15",
+      "link": "https://www.contabeis.com.br/noticia/receita-federal-alerta-para-golpes-envolvendo-falsos-restituicoes-do-irpf-2026"
     },
     {
-      "titulo": "Riscos de autuação fiscal aumentam com dados cruzados em 2026",
-      "resumo": "Especialistas alertam que o aumento do compartilhamento de dados entre órgãos governamentais em 2026 elevará significativamente os riscos de autuação fiscal para empresas e contribuintes.",
-      "link": "https://www.contadores.cnt.br/noticia/riscos-de-autuacao-fiscal-aumentam-com-dados-cruzados-em-2026"
+      "titulo": "STF julga ação sobre incidência de ICMS em operações com cartões de crédito",
+      "resumo": "O Supremo Tribunal Federal começa a julgar hoje a ação que discute se operações com cartões de crédito devem ou não sofrer incidência do imposto sobre circulação de mercadorias e serviços.",
+      "fonte": "Exame",
+      "hora_postada": "02/06/2026 09:00",
+      "link": "https://exame.com/brasil/stf-julga-acao-sobre-incidencia-de-icms-em-operacoes-com-cartoes-de-credito/"
     },
     {
-      "titulo": "IFRS 18: contabilidade brasileira ignora mudança estrutural",
-      "resumo": "Apesar da implementação iminente do IFRS 18, muitas empresas brasileiras ainda não estão preparadas para as mudanças estruturais que o novo padrão contábil trará nas demonstrações financeiras.",
-      "link": "https://www.portalcontabeis.com.br/noticia/ifrs-18-contabilidade-brasileira-ignora-mudanca-estrutural"
+      "titulo": "Novo cálculo do FGTS passa a valer a partir de julho impactando rescisões",
+      "resumo": "Mudança na fórmula de cálculo do saldo do FGTS será implementada a partir de 1º de julho, afetando empresas que precisam fazer rescisões de contrato neste período.",
+      "fonte": "Jornal Contábil",
+      "hora_postada": "02/06/2026 06:45",
+      "link": "https://www.jornalcontabil.com.br/noticia/novo-calculo-do-fgts-passa-a-valer-a-partir-de-julho"
     },
     {
-      "titulo": "Especialistas criticam pacote de socorro fora da meta fiscal: ‘Contabilidade criativa’",
-      "resumo": "Economistas e contadores criticam as medidas do governo que fogem da meta fiscal, caracterizando algumas práticas como 'contabilidade criativa' que podem gerar distorções nas contas públicas.",
-      "link": "https://economia.estadao.com.br/noticias/geral,especialistas-criticam-pacote-de-socorro-fora-da-meta-fiscal-contabilidade-criativa,70001234567"
+      "titulo": "Contadores têm até 30 de junho para entregar a ECF referente ao ano de 2025",
+      "resumo": "Prazo final para entrega da Escrituração Contábil Fiscal (ECF) relativa ao ano-base de 2025 se aproxima, com multas previstas para entregas fora do prazo.",
+      "fonte": "Receita Federal",
+      "hora_postada": "02/06/2026 10:00",
+      "link": "https://www.gov.br/receitafederal/pt-br/assuntos/contabilidade-e-tributacao/escrituracoes-digitais"
     }
   ]
 }

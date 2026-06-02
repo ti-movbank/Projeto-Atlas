@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-02 09:44",
+  "updated_at": "2026-06-02 09:46",
   "public_health": {
     "atualizacoes_publicadas_com_sucesso": true,
     "quantos_jobs_ativos": 5,
     "quantos_jobs_ativados_e_parados": 0,
     "quantos_jobs_total": 5,
-    "ultima_atualizacao_hhmm": "09:44",
-    "custo_total_estimado_usd_do_dia": null
+    "ultima_atualizacao_hhmm": "09:46",
+    "custo_total_estimado_usd_do_dia": 28.823332687500002
   },
   "integracoes": {
     "integrations": {
@@ -34,9 +34,9 @@
     "pendencias": []
   },
   "logs_minimos": {
-    "falhas_ultimas_24h": 205,
+    "falhas_ultimas_24h": 201,
     "por_tipo": {
-      "other_error": 68,
+      "other_error": 64,
       "traceback": 8,
       "http_error": 43,
       "tool_terminal_error": 27,

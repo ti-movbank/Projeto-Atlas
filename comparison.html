@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes Agent vs Claude Desktop – Comparativo</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); min-height:100vh; padding:20px; }
+        .container { max-width:1200px; margin:0 auto; background:white; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.1); overflow:hidden; }
+        header { background:linear-gradient(to right,#ff9a9e 0%,#fad0c4 100%); color:white; padding:30px; text-align:center; }
+        header h1 { font-size:2.5rem; margin-bottom:10px; display:flex; align-items:center; justify-content:center; gap:15px; }
+        header h1::before { content:"⚖️"; font-size:2.8rem; }
+        header p { font-size:1.2rem; opacity:0.9; max-width:800px; margin:0 auto; }
+        .content { padding:30px; }
+        .section { background:#f8f9ff; border-radius:15px; padding:25px; margin-bottom:25px; box-shadow:0 5px 15px rgba(0,0,0,0.05); border-left:4px solid #00f2fe; }
+        .section h2 { color:#2c3e50; margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+        .section h2::before { font-size:1.5rem; }
+        .compare { display:flex; gap:30px; margin-top:20px; }
+        .column { flex:1; background:#fff; border-radius:10px; padding:20px; box-shadow:0 3px 10px rgba(0,0,0,0.1); }
+        .column h3 { color:#2c3e50; margin-bottom:15px; display:flex; align-items:center; gap:8px; }
+        .column h3::before { font-size:1.2rem; }
+        .pros { color:#2e7d32; }
+        .cons { color:#c62828; }
+        .pros::before { content:"✅ "; }
+        .cons::before { content:"❌ "; }
+        .win-lose { margin-top:20px; }
+        .win-lose h3 { color:#1565c0; margin-bottom:15px; }
+        .win-lose ul { padding-left:20px; }
+        .win-lose li { margin-bottom:8px; }
+        .win { color:#2e7d32; }
+        .lose { color:#c62828; }
+        .win::before { content:"🟢 "; }
+        .lose::before { content:"🔴 "; }
+        footer { text-align:center; padding:25px; color:#666; font-size:0.9rem; border-top:1px solid #eee; margin-top:30px; }
+        @media (max-width:768px) {
+            .compare { flex-direction:column; gap:20px; }
+        }
+        @media (max-width:480px) {
+            body { padding:10px; }
+            .container { border-radius:15px; }
+            header { padding:20px; }
+            header h1 { font-size:1.8rem; }
+            .content { padding:20px; }
+            .section { padding:20px; margin-bottom:20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hermes Agent vs Claude Desktop</h1>
+            <p>Comparativo de ecossistema, recursos e trade‑offs</p>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>🔧 Visão Geral</h2>
+                <p>
+                    <strong>Hermes Agent</strong> é um agente de código aberto, auto‑hospedável e altamente extensível, integrado a um ecossistema de skills, memória persistente, automação via cron e acesso a ferramentas locais (terminal, sistema de arquivos, navegador, etc.). Roda sobre diversos LLMs através de um roteador de modelo e pode ser acessado por Telegram, CLI ou interfaces web.
+                </p>
+                <p>
+                    <strong>Claude Desktop</strong> é o aplicativo oficial da Anthropic para interagir com os modelos Claude (como Claude 3 Opus, Sonnet, Haiku). Oferece uma interface polida, pronta para uso, com foco em conversas de alto raciocínio e segurança, mas é um produto fechado e depende da nuvem da Anthropic.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>📊 Prós e Contras</h2>
+                <div class="compare">
+                    <div class="column">
+                        <h3 class="pros">Hermes Agent – Pontos Positivos</h3>
+                        <ul>
+                            <li>Privacidade total: dados permanecem na máquina/local (nenhum envio obrigatório a terceiros).</li>
+                            <li>Extensibilidade via <em>skills</em>: funções prontas para e‑mail, busca, automação, geração de relatórios, etc.</li>
+                            <li>Automação avançada: cron jobs, tarefas em background, integração com GitHub Pages, Notion, Google Workspace, etc.</li>
+                            <li>Controle de custos: escolha de modelos (incluindo gratuitos) e relatórios de consumo.</li>
+                            <li>Transparência: código aberto, possibilidade de inspeção e modificação.</li>
+                            <li>Suporte a múltiplos LLMs via roteador (kimi‑k2.6, gpt‑5.4, claude‑opus‑4.7, etc.).</li>
+                            <li>Acesso a ferramentas locais: terminal, edição de arquivos, visão, busca na web, etc.</li>
+                            <li>Pode ser usado em ambientes restritos (sem internet constante) graças ao funcionamento local.</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="cons">Hermes Agent – Pontos Negativos</h3>
+                        <ul>
+                            <li>Curva de aprendizado mais acentuada (requer algum conhecimento técnico para instalação e customização).</li>
+                            <li>Dependência de provedores de modelos (qualidade varia conforme o modelo escolhido).</li>
+                            <li>Interface menos polida que produtos comerciais (principalmente interação via Telegram/CLI).</li>
+                            <li>Responsabilidade de manutenção (atualizações, backup, segurança) recai sobre o usuário.</li>
+                            <li>Ecossistema de skills ainda em crescimento; algumas funcionalidades podem faltar ou precisar de ajustes.</li>
+                            <li>Latência pode ser maior em modelos locais ou hospedados remotamente.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>⚖️ Onde cada um ganha e perde</h2>
+                <div class="win-lose">
+                    <h3>Hermes Agent vence quando:</h3>
+                    <ul>
+                        <li class="win">Privacidade e soberania dos dados são críticos.</li>
+                        <li class="win">É necessário automatizar tarefas (cron, integração com repositórios, atualização de páginas).</li>
+                        <li class="win">Se quer controlar custos ou usar modelos gratuitos/local.</li>
+                        <li class="win">Se deseja estender funcionalidades via skills ou criar fluxos personalizados.</li>
+                        <li class="win">Precisa de acesso a sistema de arquivos, terminal ou execução de código local.</li>
+                        <li class="win">Ambiente de trabalho já utiliza Telegram ou outras plataformas suportadas pelo Hermes.</li>
+                    </ul>
+                    <h3>Claude Desktop vence quando:</h3>
+                    <ul>
+                        <li class="lose">Facilidade de uso imediata (nenhuma instalação ou configuração).</li>
+                        <li class="lose">Interface de chat refinada e experiência do usuário consistente.</li>
+                        <li class="lose">Segurança e alinhamento robustos fornecidos pela Anthropic.</li>
+                        <li class="lose">Uso ocasional ou pontual sem necessidade de automação avançada.</li>
+                        <li class="lose">Preferência por um modelo proprietário com atualizações garantidas.</li>
+                        <li class="lose">Integração com ecossistema da Anthropic (por exemplo, Claude para empresas, APIs oficiais).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🧭 Conclusão</h2>
+                <p>
+                    Ambos são excelentes escolhas, mas atendem a perfis diferentes. Se o foco é <strong>privacidade, customização, automação e controle de custos</strong>, o <em>Hermes Agent</em> leva vantagem. Já se o objetivo é <strong>usar um modelo de frontier model com experiência pronta, suporte oficial e mínima fricção</strong>, o <em>Claude Desktop</em> é a opção mais indicada. Em muitos cenários, eles podem até ser complementares: usar o Hermes para tarefas de fundo e o Claude para conversas de alto nível.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            Comparativo gerado por Hermes Agent • © 2026 Projeto Atlas
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-06-03 00:00",
+  "updated_at": "2026-06-03 06:00",
   "public_health": {
     "atualizacoes_publicadas_com_sucesso": true,
     "quantos_jobs_ativos": 5,
     "quantos_jobs_ativados_e_parados": 0,
     "quantos_jobs_total": 5,
-    "ultima_atualizacao_hhmm": "00:00",
+    "ultima_atualizacao_hhmm": "06:00",
     "custo_total_estimado_usd_do_dia": 29.154241662500002
   },
   "integracoes": {
     "integrations": {
       "gmail": {
         "state": "conectado",
-        "last_run": "2026-06-02T23:49:10.345191-03:00  ok",
+        "last_run": "2026-06-03T05:49:38.560447-03:00  ok",
         "paused": false
       },
       "memory": {
@@ -34,16 +34,16 @@
     "pendencias": []
   },
   "logs_minimos": {
-    "falhas_ultimas_24h": 168,
+    "falhas_ultimas_24h": 163,
     "por_tipo": {
-      "tool_skill_manage_error": 66,
-      "cron_issue": 11,
-      "http_error": 20,
-      "other_error": 27,
+      "other_error": 28,
+      "tool_skill_manage_error": 62,
       "tool_terminal_error": 33,
+      "cron_issue": 9,
       "rate_limit": 2,
-      "traceback": 9
+      "traceback": 9,
+      "http_error": 20
     },
-    "ultimo_erro": "2026-06-02 21:11:41,248 WARNING [20260602_063739_bd883e33] agent.tool_executor: Tool terminal returned error (0.45s): {\"output\": \"Traceback "
+    "ultimo_erro": "2026-06-03 01:06:03,214 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: htt"
   }
 }

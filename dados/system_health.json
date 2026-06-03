@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-06-02 18:00",
+  "updated_at": "2026-06-03 00:00",
   "public_health": {
     "atualizacoes_publicadas_com_sucesso": true,
     "quantos_jobs_ativos": 5,
     "quantos_jobs_ativados_e_parados": 0,
     "quantos_jobs_total": 5,
-    "ultima_atualizacao_hhmm": "18:00",
-    "custo_total_estimado_usd_do_dia": 30.940599175000003
+    "ultima_atualizacao_hhmm": "00:00",
+    "custo_total_estimado_usd_do_dia": 29.154241662500002
   },
   "integracoes": {
     "integrations": {
       "gmail": {
         "state": "conectado",
-        "last_run": "2026-06-02T17:48:25.385705-03:00  ok",
+        "last_run": "2026-06-02T23:49:10.345191-03:00  ok",
         "paused": false
       },
       "memory": {
         "state": "conectado",
-        "last_run": "2026-06-01T23:00:52.024188-03:00  ok",
+        "last_run": "2026-06-02T23:00:05.975698-03:00  ok",
         "paused": false
       },
       "news": {
@@ -27,23 +27,23 @@
       },
       "cost": {
         "state": "conectado",
-        "last_run": "2026-06-01T18:01:29.736319-03:00  ok",
+        "last_run": "2026-06-02T18:00:43.101220-03:00  ok",
         "paused": false
       }
     },
     "pendencias": []
   },
   "logs_minimos": {
-    "falhas_ultimas_24h": 237,
+    "falhas_ultimas_24h": 168,
     "por_tipo": {
-      "other_error": 38,
-      "http_error": 59,
-      "traceback": 9,
-      "cron_issue": 12,
-      "tool_skill_manage_error": 84,
+      "tool_skill_manage_error": 66,
+      "cron_issue": 11,
+      "http_error": 20,
+      "other_error": 27,
       "tool_terminal_error": 33,
-      "rate_limit": 2
+      "rate_limit": 2,
+      "traceback": 9
     },
-    "ultimo_erro": "2026-06-02 17:48:32,520 WARNING [20260602_172346_4c8b5d] agent.tool_executor: Tool memory returned error (0.00s): {\"success\": false, \"error\""
+    "ultimo_erro": "2026-06-02 21:11:41,248 WARNING [20260602_063739_bd883e33] agent.tool_executor: Tool terminal returned error (0.45s): {\"output\": \"Traceback "
   }
 }

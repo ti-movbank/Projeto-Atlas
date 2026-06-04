@@ -1,93 +1,19 @@
 {
-  "2026-06-01": [
-    {
-      "titulo": "Reforma tributária avança no Senado com novas regras para empresas",
-      "resumo": "O Senado Federal aprovou em primeira votação mudanças na reforma tributária que impactam diretamente o regime de apuração de impostos para empresas de todos os tamanhos.",
-      "fonte": "Valor Econômico",
-      "hora_postada": "01/06/2026 07:00",
-      "link": "https://valor.globo.com/economia/noticia/reforma-tributaria-avanca-no-senado-com-novas-regras-para-empresas.ghtml"
-    },
-    {
-      "titulo": "Receita Federal alerta para golpes envolvendo falsos restituições do IRPF 2026",
-      "resumo": "Contribuintes são orientados a não clicar em links suspeitos recebidos por e-mail ou SMS prometendo agilizar a restituição do imposto de renda deste ano.",
-      "fonte": "Portal Contábeis",
-      "hora_postada": "01/06/2026 06:00",
-      "link": "https://www.contabeis.com.br/noticia/receita-federal-alerta-para-golpes-envolvendo-falsos-restituicoes-do-irpf-2026"
-    },
-    {
-      "titulo": "STF julga ação sobre incidência de ICMS em operações com cartões de crédito",
-      "resumo": "O Supremo Tribunal Federal começa a julgar hoje a ação que discute se operações com cartões de crédito devem ou não sofrer incidência do imposto sobre circulação de mercadorias e serviços.",
-      "fonte": "Exame",
-      "hora_postada": "01/06/2026 05:00",
-      "link": "https://exame.com/brasil/stf-julga-acao-sobre-incidencia-de-icms-em-operacoes-com-cartoes-de-credito/"
-    },
-    {
-      "titulo": "Novo cálculo do FGTS passa a valer a partir de julho impactando rescisões",
-      "resumo": "Mudança na fórmula de cálculo do saldo do FGTS será implementada a partir de 1º de julho, afetando empresas que precisam fazer rescisões de contrato neste período.",
-      "fonte": "Jornal Contábil",
-      "hora_postada": "01/06/2026 04:00",
-      "link": "https://www.jornalcontabil.com.br/noticia/novo-calculo-do-fgts-passa-a-valer-a-partir-de-julho"
-    },
-    {
-      "titulo": "Contadores têm até 30 de junho para entregar a ECF referente ao ano de 2025",
-      "resumo": "Prazo final para entrega da Escrituração Contábil Fiscal (ECF) relativa ao ano-base de 2025 se aproxima, com multas previstas para entregas fora do prazo.",
-      "fonte": "Receita Federal",
-      "hora_postada": "01/06/2026 03:00",
-      "link": "https://www.gov.br/receitafederal/pt-br/assuntos/contabilidade-e-tributacao/escrituracoes-digitais"
-    },
-    {
-      "titulo": "PF prende suspeitos de fraude em contratos de licitação no valor de R$ 50 milhões",
-      "resumo": "Operação da Polícia Federal desmonta esquema de superfaturamento em contratos públicos envolvendo empresas de médio porte.",
-      "fonte": "Exame",
-      "hora_postada": "01/06/2026 02:00",
-      "link": "https://exame.com/brasil/pf-prende-suspeitos-fraude-contratos-licitacao/"
-    }
-  ],
-  "2026-06-02": [
-    {
-      "titulo": "Reforma tributária muda critérios de compra entre empresas - Capital Aberto",
-      "resumo": "Reforma tributária muda critérios de compra entre empresas Capital Aberto",
-      "fonte": "Capital Aberto",
-      "hora_postada": "02/06/2026 10:19",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMXRpdXlnVkZjdG9mOHhZWWEtcHZSazZnQlh1TDJSSktCRUg5RmQzMzMtdmZIV3FmdHdJRzBVUnNMWXRubFB3MDM0eWYxOEM3Rlk3ZUxnVjhIUGE0SjBNYlpnYWc1S1owNlhrR1o1cGpCTjFLMnVZRkFURndHY1pnZ0liak8xZC1ZY2xuSHZ1ODV3cmw1QUc0RG93?oc=5"
-    },
-    {
-      "titulo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas - Portal Contabeis",
-      "resumo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas Portal Contabeis",
-      "fonte": "Portal Contabeis",
-      "hora_postada": "30/05/2026 09:00",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQR240Uk1EZ1ZyN0d3QnVkYzVvbkc3VW11NWdMaUJza3V3a0Iwc00xaHh4Z1B1YUdKMHBTRWlSM01RWFRrWmhJTkZ0V1R6SnJnV3lFakoxVmRuMjZaMnZqZHh4YWowSmlIalRmQ1V0M1NUbmxodmFZWFBsMTM0RUEzOTVwZnlxM04yZWdFUGo4YzR2akxic1F1eW8zdnVGY0RnTm56QXQxel80UkxnQmRtYWtRRWk3UQ?oc=5"
-    },
-    {
-      "titulo": "Fecomércio-PE promove circuito itinerante sobre reforma tributária - Portal do Comércio",
-      "resumo": "Fecomércio-PE promove circuito itinerante sobre reforma tributária Portal do Comércio",
-      "fonte": "Portal do Comércio",
-      "hora_postada": "02/06/2026 10:39",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQR2NVcVZVMW5SbTlrZDh4NFU3OEUxQlZZY1IzemxNWFRwUFJpY2J0dkNGYnNoZmZLR3oxX3ZlLW1jNlZjTDFNZmk2aE05c1p1YjhkMHNFUk1PZjJSbXl0Y2NsQ0RBaGlKWE1XY2N3d2FzcEw3cVlJZHJJbEl0eF9JRWNINXJ4bDNCYUdycWdObFh0cTVrNk5JNXpzQ1pFamRpX0l6dU1qcmNGZVMyOGNvanpsdDYxMzQ?oc=5"
-    },
-    {
-      "titulo": "Reforma tributária já começou; veja o que muda para empresas - UOL",
-      "resumo": "Reforma tributária já começou; veja o que muda para empresas UOL",
-      "fonte": "UOL",
-      "hora_postada": "02/06/2026 05:33",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBWY0I2NWJYdE5fclhBNGtSTjdqLXF6UzFpeVdqOXp1a1M0QjJwWjBoaGFYeC03NUNta1NLUVBmS01RVExWU19EWFdNRWl0Y3JiRFlqM3RjY0RrTWNPQy1lZnl1NC1ZcU13SXZoS2lxa1p1Rm0wMmVWeWxfWQ?oc=5"
-    },
-    {
-      "titulo": "Reforma tributária obriga empresas a reverem estratégias para além dos impostos - Conselho Regional de Contabilidade do Maranhão",
-      "resumo": "Reforma tributária obriga empresas a reverem estratégias para além dos impostos Conselho Regional de Contabilidade do Maranhão",
-      "fonte": "Conselho Regional de Contabilidade do Maranhão",
-      "hora_postada": "01/06/2026 11:13",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUkRpaHI0QnVqMkI2MmZBNU9VYU9ZMTBCVUM5YmtmM2pBTzRXYjliYU16VENwVUpwcG9RRHE2czhvUUtvMFZqZDVhUnJRcm84Qm81T1BodEpDRm5HY1NzTHpURE5vSzI0VEVGZnh4NlpCQ2pvajNGcnJLRnVzQjJQd2E2SzlWV1JUaWsxcFdQVndWdV8zTUJrU3NUWV9FNGRkOE50bE94S3ZTOEIyclE?oc=5"
-    },
-    {
-      "titulo": "Split Payment na reforma tributária: Impactos e preparação empresarial - Migalhas",
-      "resumo": "Split Payment na reforma tributária: Impactos e preparação empresarial Migalhas",
-      "fonte": "Migalhas",
-      "hora_postada": "28/05/2026 10:48",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQzJ2ak1RNEFDMm5xYlBON19qNG0zM1NtTFlDdFpTU3JMeGhpMnhCRE5qamlnLVZoTGhUdFFjaGNuRk1ENTdHa3hldnpXaU5vcGNjUnc1eHJpMjdKN191dGR1RXFNSmRrejdmVTBKZldXajZ0aUZmaHNFWHhRaXV1eW5pMzNJb0N0MU01MG9TeGhaeWUteFFfLTB4SWgxZEROUW0weG5ZcnVRUzc1bkdHXw?oc=5"
-    }
-  ],
   "2026-06-03": [
+    {
+      "titulo": "Reforma tributária: veja principais preocupações das empresas na transição - Portal Contabeis",
+      "resumo": "Reforma tributária: veja principais preocupações das empresas na transição Portal Contabeis",
+      "fonte": "Portal Contabeis",
+      "hora_postada": "03/06/2026 11:30",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOOXZfR0pWaFlVRzFJU1NpRVV6MXY4VmFZTHBWZ05NamZaVnNMUG5BQUtnOFJUYWZYdFh0T0Fqelk1dzlpUW1SSjFkcnZqdWo0WjNKZ2U0M3d6c1VVYUdrMDBHdWpVamI4d3I5SWJZOE11RmpmcEdEOWVHR0luNFp0OFdzM0lLd1JTYWRqUzFnempJUEh5VzFaQUJWQlI0S1FPaE1oTEh0X2J6ZHdBNzhCUEVvWUVmVVhFNEE?oc=5"
+    },
+    {
+      "titulo": "41% das empresas não compreendem totalmente a Reforma Tributária, aponta levantamento | SEGS Portal... - SEGS Portal Nacional",
+      "resumo": "41% das empresas não compreendem totalmente a Reforma Tributária, aponta levantamento | SEGS Portal... SEGS Portal Nacional",
+      "fonte": "SEGS Portal Nacional",
+      "hora_postada": "03/06/2026 15:11",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNkg0Qndfck5OekFab3BXZUcwM28yLUZzZjlTTi1qUTIwd2VBTkpfLVVGdmxWRV9CUVkyY0tLXzRjRXUtUnF6NlRpd2NTa2plZ1FfOVowMm9EcWVrb2daaWJNQXdDeVFZLUEwbVFnTXkxbXM2cVpINVo2OXZBM3Jqd2tPVDUtcmVZLTBSM2JvSGhyZWtJZTJTUmxyNWNZeGpIeEhpOExGU0JaNURRZG9KazFqRW5jYjVtcTlJYWJISdIBxAFBVV95cUxNX0FkWXRyVGtIRElaOE1ILUFEUU93ZmtUc0p0anZ1LUZqMHhvekgwbTNjTWg0TmlfbVo1ZVA2QWl6YUtMZXhJU3h1R2xKYnJ5ZW0yX2YxanMwOHRWWTBYcFhVaUVGR2ctV3dKUElEdVBfZ0Rhd0V0ZldBV18weTBPazB0ampORW5wU0lyeEVtdTNCOEl3YW0xQjY3a2dqLXlwU1VxRElLaVRYdVlmNFFwVGI4bkpRSl9IT2RNMjVDbElzMzNW?oc=5"
+    },
     {
       "titulo": "Reforma tributária amplia desafios no regime drawback-suspensão - JOTA",
       "resumo": "Reforma tributária amplia desafios no regime drawback-suspensão JOTA",
@@ -103,13 +29,6 @@
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUkRpaHI0QnVqMkI2MmZBNU9VYU9ZMTBCVUM5YmtmM2pBTzRXYjliYU16VENwVUpwcG9RRHE2czhvUUtvMFZqZDVhUnJRcm84Qm81T1BodEpDRm5HY1NzTHpURE5vSzI0VEVGZnh4NlpCQ2pvajNGcnJLRnVzQjJQd2E2SzlWV1JUaWsxcFdQVndWdV8zTUJrU3NUWV9FNGRkOE50bE94S3ZTOEIyclE?oc=5"
     },
     {
-      "titulo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas - Portal Contabeis",
-      "resumo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas Portal Contabeis",
-      "fonte": "Portal Contabeis",
-      "hora_postada": "30/05/2026 09:00",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQR240Uk1EZ1ZyN0d3QnVkYzVvbkc3VW11NWdMaUJza3V3a0Iwc00xaHh4Z1B1YUdKMHBTRWlSM01RWFRrWmhJTkZ0V1R6SnJnV3lFakoxVmRuMjZaMnZqZHh4YWowSmlIalRmQ1V0M1NUbmxodmFZWFBsMTM0RUEzOTVwZnlxM04yZWdFUGo4YzR2akxic1F1eW8zdnVGY0RnTm56QXQxel80UkxnQmRtYWtRRWk3UQ?oc=5"
-    },
-    {
       "titulo": "Heloísa de Castro, presidente do CRC-SP: reforma tributária é choque de gestão forçado - DComercio",
       "resumo": "Heloísa de Castro, presidente do CRC-SP: reforma tributária é choque de gestão forçado DComercio",
       "fonte": "DComercio",
@@ -122,13 +41,50 @@
       "fonte": "Capital Aberto",
       "hora_postada": "02/06/2026 10:19",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMXRpdXlnVkZjdG9mOHhZWWEtcHZSazZnQlh1TDJSSktCRUg5RmQzMzMtdmZIV3FmdHdJRzBVUnNMWXRubFB3MDM0eWYxOEM3Rlk3ZUxnVjhIUGE0SjBNYlpnYWc1S1owNlhrR1o1cGpCTjFLMnVZRkFURndHY1pnZ0liak8xZC1ZY2xuSHZ1ODV3cmw1QUc0RG93?oc=5"
+    }
+  ],
+  "2026-06-04": [
+    {
+      "titulo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas - Portal Contabeis",
+      "resumo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas Portal Contabeis",
+      "fonte": "Portal Contabeis",
+      "hora_postada": "30/05/2026 09:00",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQR240Uk1EZ1ZyN0d3QnVkYzVvbkc3VW11NWdMaUJza3V3a0Iwc00xaHh4Z1B1YUdKMHBTRWlSM01RWFRrWmhJTkZ0V1R6SnJnV3lFakoxVmRuMjZaMnZqZHh4YWowSmlIalRmQ1V0M1NUbmxodmFZWFBsMTM0RUEzOTVwZnlxM04yZWdFUGo4YzR2akxic1F1eW8zdnVGY0RnTm56QXQxel80UkxnQmRtYWtRRWk3UQ?oc=5"
     },
     {
-      "titulo": "Split Payment na reforma tributária: Impactos e preparação empresarial - Migalhas",
-      "resumo": "Split Payment na reforma tributária: Impactos e preparação empresarial Migalhas",
-      "fonte": "Migalhas",
-      "hora_postada": "28/05/2026 10:48",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQzJ2ak1RNEFDMm5xYlBON19qNG0zM1NtTFlDdFpTU3JMeGhpMnhCRE5qamlnLVZoTGhUdFFjaGNuRk1ENTdHa3hldnpXaU5vcGNjUnc1eHJpMjdKN191dGR1RXFNSmRrejdmVTBKZldXajZ0aUZmaHNFWHhRaXV1eW5pMzNJb0N0MU01MG9TeGhaeWUteFFfLTB4SWgxZEROUW0weG5ZcnVRUzc1bkdHXw?oc=5"
+      "titulo": "41% das empresas não compreendem totalmente a Reforma Tributária, aponta levantamento | SEGS Portal... - SEGS Portal Nacional",
+      "resumo": "41% das empresas não compreendem totalmente a Reforma Tributária, aponta levantamento | SEGS Portal... SEGS Portal Nacional",
+      "fonte": "SEGS Portal Nacional",
+      "hora_postada": "03/06/2026 15:11",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNkg0Qndfck5OekFab3BXZUcwM28yLUZzZjlTTi1qUTIwd2VBTkpfLVVGdmxWRV9CUVkyY0tLXzRjRXUtUnF6NlRpd2NTa2plZ1FfOVowMm9EcWVrb2daaWJNQXdDeVFZLUEwbVFnTXkxbXM2cVpINVo2OXZBM3Jqd2tPVDUtcmVZLTBSM2JvSGhyZWtJZTJTUmxyNWNZeGpIeEhpOExGU0JaNURRZG9KazFqRW5jYjVtcTlJYWJISdIBxAFBVV95cUxNX0FkWXRyVGtIRElaOE1ILUFEUU93ZmtUc0p0anZ1LUZqMHhvekgwbTNjTWg0TmlfbVo1ZVA2QWl6YUtMZXhJU3h1R2xKYnJ5ZW0yX2YxanMwOHRWWTBYcFhVaUVGR2ctV3dKUElEdVBfZ0Rhd0V0ZldBV18weTBPazB0ampORW5wU0lyeEVtdTNCOEl3YW0xQjY3a2dqLXlwU1VxRElLaVRYdVlmNFFwVGI4bkpRSl9IT2RNMjVDbElzMzNW?oc=5"
+    },
+    {
+      "titulo": "Receita identifica divergências de R$ 44 bi em créditos de PIS/Cofins - Agência Brasil",
+      "resumo": "Receita identifica divergências de R$ 44 bi em créditos de PIS/Cofins Agência Brasil",
+      "fonte": "Agência Brasil",
+      "hora_postada": "03/06/2026 19:22",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOV0Y5LThPUi15aEdZUTNRQ3FJbWpDaVE1RVRweDRYYndkaWlDTjhSM3BDQkJOLVpiUllfVFhTLXRqemtfSG9BcmNDY3g1anRaUXA2RnduS2lqRVhMY2pqajM5eTdXU1Z6TVJHOVJGUjR5TlhpQk5PaWRvbEY4SW1QM3pFM18xVmk4SlEyN3VsWm5hQUowTkpBckZqNGJ4RWx3eEc3ZFl1OFRBSGE2eVV4WFFJTHQxeFBsYjE4RHZQelVRZms?oc=5"
+    },
+    {
+      "titulo": "Reforma tributária obriga empresas a reverem estratégias para além dos impostos - Conselho Regional de Contabilidade do Maranhão",
+      "resumo": "Reforma tributária obriga empresas a reverem estratégias para além dos impostos Conselho Regional de Contabilidade do Maranhão",
+      "fonte": "Conselho Regional de Contabilidade do Maranhão",
+      "hora_postada": "02/06/2026 13:33",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUkRpaHI0QnVqMkI2MmZBNU9VYU9ZMTBCVUM5YmtmM2pBTzRXYjliYU16VENwVUpwcG9RRHE2czhvUUtvMFZqZDVhUnJRcm84Qm81T1BodEpDRm5HY1NzTHpURE5vSzI0VEVGZnh4NlpCQ2pvajNGcnJLRnVzQjJQd2E2SzlWV1JUaWsxcFdQVndWdV8zTUJrU3NUWV9FNGRkOE50bE94S3ZTOEIyclE?oc=5"
+    },
+    {
+      "titulo": "Reforma tributária muda critérios de compra entre empresas - Capital Aberto",
+      "resumo": "Reforma tributária muda critérios de compra entre empresas Capital Aberto",
+      "fonte": "Capital Aberto",
+      "hora_postada": "02/06/2026 10:19",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOMXRpdXlnVkZjdG9mOHhZWWEtcHZSazZnQlh1TDJSSktCRUg5RmQzMzMtdmZIV3FmdHdJRzBVUnNMWXRubFB3MDM0eWYxOEM3Rlk3ZUxnVjhIUGE0SjBNYlpnYWc1S1owNlhrR1o1cGpCTjFLMnVZRkFURndHY1pnZ0liak8xZC1ZY2xuSHZ1ODV3cmw1QUc0RG93?oc=5"
+    },
+    {
+      "titulo": "Reforma tributária amplia desafios no regime drawback-suspensão - JOTA",
+      "resumo": "Reforma tributária amplia desafios no regime drawback-suspensão JOTA",
+      "fonte": "JOTA",
+      "hora_postada": "03/06/2026 05:00",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYWl3R0l1YWJ0Z1hIdlhfekxQMHNrZkN0bzhSb1cyQU1PRHNpeEEwWWV1bFk4YXFCbmR0enJSRUtwWUxnZU1mX0U0d0liNS02WEppX1A2UzBDaXc4VXRxLXAwczJkTDFCRV8ySUw5cTlTVGtsNEFHMV95VktXQl9FN2haclhyMXpIQzJOR3ZCOHRwSEtSRm1CczYwYlJrcVlkOVUzLXNXUEtrdXhJcV9NUw?oc=5"
     }
   ]
 }

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honcho no Hermes: Sistema de Memória de Longo Prazo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 3px align="center"    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Honcho no Hermes</h1>
+            <p class="subtitle">Sistema de Memória de Longo Prazo para Assistentes de IA</p>
+        </header>
+
+        <section class="overview">
+            <h2>O que é o Honcho?</h2>
+            <p>O Honcho é o sistema de memória de longo prazo integrado ao Hermes Agent, responsável por construir e manter um perfil dinâmico tanto do usuário quanto do próprio assistente ao longo de múltiplas sessões. Ele opera como uma camada de conhecimento contextual que melhora a personalização e reduz a necessidade de reexplicação de preferências.</p>
+        </section>
+
+        <section class="configuration">
+            <h2>⚙️ Configuração Atual</h2>
+            <div class="config-grid">
+                <div class="config-item">
+                    <h3>Workspace</h3>
+                    <p><strong>Felipe MOVBANK</strong></p>
+                </div>
+                <div class="config-item">
+                    <h3>Modo de Observação</h3>
+                    <p>Direcional (foca em observar o usuário para construir perfil)</p>
+                </div>
+                <div class="config-item">
+                    <h3>Frequência de Escrita</h3>
+                    <p>Assíncrona (não bloqueia o fluxo principal)</p>
+                </div>
+                <div class="config-item">
+                    <h3>Estratégia de Recall</h3>
+                    <p>Híbrido (combina recuperação direta e inferencial)</p>
+                </div>
+                <div class="config-item">
+                    <h3>Estratégia de Sessão</h3>
+                    <p>Por diretório (contextualizado ao workspace atual)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="what-it-learns">
+            <h2>📚 O Que o Honcho Aprende</h2>
+            <div class="two-column">
+                <div class="learns-column">
+                    <h3>Sobre o Usuário (Você)</h3>
+                    <ul>
+                        <li><strong>Identidade:</strong> Rálinson Dos Santos (Cidão, Felipe)</li>
+                        <li><strong>Função:</strong> Contabilidade, obrigações fiscais e automação no MOVBANK</li>
+                        <li><strong>Fuso Horário:</strong> Brasília (UTC-3)</li>
+                        <li><strong>Preferência de Modelo:</strong> <code>deepseek/deepseek-v4-flash</code> (Normal)</li>
+                        <li><strong>Comunicação:</strong> Direta, concisa, orientada à resolução imediata</li>
+                        <li><strong>Confiabilidade:</strong> Modelo de confiança em níveis (responde automaticamente a e-mails de <code>alcides@movbank.com.br</code>, pede confirmação para outros)</li>
+                        <li><strong>Infraestrutura:</strong> Prefere gerenciar CLI, systemd e seleção de modelo diretamente ("mentalidade de propriedade técnica")</li>
+                    </ul>
+                </div>
+                <div class="learns-column">
+                    <h3>Sobre o Assistente (Eu - Felipe)</h3>
+                    <ul>
+                        <li><strong>Identidade:</strong> Assistente especializado em contabilidade para MOVBANK</li>
+                        <li><strong>Localização:</strong> Brasília (UTC-3)</li>
+                        <li><strong>Sistema de Memória:</strong> Redundante (<code>MEMORY.md</code>, <code>USER.md</code>, backups no Notion)</li>
+                        <li><strong>Abordagem de Contexto:</strong> Prioriza fontes: <code>MEMORY.md</code> → <code>USER.md</code> → Notion "Memória rápida" → <code>session_search</code> → Notion "Obrigações Fiscais"</li>
+                        <li><strong>Exceção de Acesso:</strong> Usuário ID 1272731227 (Cidão) tem permissão para ações de alta confiança sem confirmação</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="patterns">
+            <h2>🔍 Padrões Observados (Aprendizado Indutivo)</h2>
+            <div class="pattern">
+                <h3>🏢 Mentalidade de Propriedade Técnica</h3>
+                <p>Você prefere gerenciar a infraestrutura do AI (CLI configuration, systemd management, model selection) em vez de delegar decisões de sistema. Isso é evidenciado pela sua configuração pessoal do Honcho via CLI e preferência por <code>hermes config set</code> em vez de edição direta do <code>config.yaml</code>.</p>
+            </div>
+            <div class="pattern">
+                <h3>🔒 Modelo de Confiança em Níveis</h3>
+                <p>Você autoriza respostas automáticas apenas para e-mails de <code>alcides@movbank.com.br</code> quando claramente dirigidos ao assistente, exigindo confirmação explícita para qualquer ação externa sensível (envio de e-mail, modificação de arquivos, alterações de acesso).</p>
+            </div>
+            <div class="pattern">
+                <h3>💻 Preferência por Soluções Locais/Nativas</h3>
+                <p>Para tarefas críticas como renderização de 2FA do Google Meet, você prefere <code>xvfb + Chromium local</code> (Playwright, headless:false) em vez de soluções headless pura como Browserbase, que resulta em página branca durante o fluxo de 2FA.</p>
+            </div>
+            <div class="pattern">
+                <h3>📋 Higiene de Dados e Minimalismo Estrutural</h3>
+                <p>Você mantém arquivos <code>MEMORY.md</code> e <code>USER.md</code> minimalistas, contendo apenas informações essenciais operacionais, e prefere estrutura HTML limpa sem seções duplicadas ao gerar conteúdo dinâmico.</p>
+            </div>
+            <div class="pattern">
+                <h3>⏰ Agendamento de Tarefas em Horários Estratégicos</h3>
+                <p>Você estrutura tarefas em background (backups, atualização de notícias fiscais) para ocorrerem nas primeiras horas da manhã (02:00 e 06:00 Brasília), garantindo que manutenção e agregação de dados sejam concluídas antes do expediente.</p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>🔄 Como Funciona na Prática</h2>
+            <ol>
+                <li><strong>Observação:</strong> Durante cada conversa, o Honcho coleta fatos explícitos (identidade, preferências, regras) e infere padrões comportamentais ao longo do tempo.</li>
+                <li><strong>Armazenamento:</strong> As informações são salvas como "conclusões" persistentes na memória de longo prazo, construindo um perfil rico tanto para você quanto para o assistente.</li>
+                <li><strong>Recuperação:</strong> Em novas sessões, o Honcho fornece contexto relevante automaticamente – seja através de um perfil resumido (<code>honcho_profile</code>), busca de excerpts brutos (<code>honcho_search</code>) ou respostas sintetizadas (<code>honcho_reasoning</code>).</li>
+                <li><strong>Integração:</strong> Este contexto é usado para personalizar respostas, evitar loops de confirmação desnecessários e antecipar suas necessidades com base no comportamento observado.</li>
+            </ol>
+        </section>
+
+        <section class="benefits">
+            <h2>✅ Benefícios para o Seu Fluxo de Trabalho</h2>
+            <ul>
+                <li><strong>Redução de Repetição:</strong> Não precisa explicar suas preferências de comunicação, modelo ou fluxo de trabalho a cada nova sessão.</li>
+                <li><strong>Personalização Dinâmica:</strong> O assistente adapta seu tom, nível de detalhe e abordagem com base no que aprendeu sobre você.</li>
+                <li><strong>Eficiência Operacional:</strong> Reduz necessidade de confirmações externas para ações que você já autorizou previamente (ex.: e-mails de <code>alcides@movbank.com.br</code>).</li>
+                <li><strong>Transparência:</strong> Você pode inspecionar exatamente o que foi aprendido sobre você através das ferramentas de introspecção do Honcho.</li>
+                <li><strong>Integração Suave:</strong> Funciona em conjunto com seu sistema de memória baseado em arquivos (<code>MEMORY.md</code>/<code>USER.md</code>) e referência no Notion, criando uma camada de conhecimento abrangente.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Sistema Honcho ativo desde a configuração do workspace <em>Felipe MOVBANK</em> via CLI. Este spiegamento representa o estado atual da memória de longo prazo observada até a presente sessão.</p>
+            <p><small>Gerado pelo Assistente Felipe (MOVBANK) • <time datetime="2026-06-05">05 de Junho de 2026</time></small></p>
+        </footer>
+    </div>
+</body>
+</html>

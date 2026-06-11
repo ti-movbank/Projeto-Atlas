@@ -1,7 +1,21 @@
 {
   "termo_buscado": "Notícias fiscais e contábeis do Brasil - Atualização diária",
-  "data_busca": "10/06/2026 06:01",
+  "data_busca": "11/06/2026 06:01",
   "resultados": [
+    {
+      "titulo": "Direito ao crédito do IBS/CBS nas autuações das empresas enquadradas no Simples - Consultor Jurídico",
+      "resumo": "Direito ao crédito do IBS/CBS nas autuações das empresas enquadradas no Simples Consultor Jurídico",
+      "fonte": "Consultor Jurídico",
+      "hora_postada": "09/06/2026 13:19",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWlVTMGJPZnBJN0w1M2VLTWV3Q3BfYlJPY2E2VXVNUUJZVzI5Sk14NG1ZSkR2cUNNQTFESWlCVGFseVdNTWNBWE1zRElVel8yZnZlZzhzSTBTMXZiVGMzU2h1OGtHYmF2Ukt2Y2V4aUE4YmFYU2pxRGsxT0xudmt5R3JJUl92Zk84djJHWGU0dW4wdXBHUHlRNG0tbnNzUnJzYkV2eV9jMVUyTEpScE11WTlCaHNWaFZHVW42UFYzdXM5RE5sQU1weA?oc=5"
+    },
+    {
+      "titulo": "Reforma Tributária: empresas pequenas e médias terão carga maior - Portal Contabeis",
+      "resumo": "Reforma Tributária: empresas pequenas e médias terão carga maior Portal Contabeis",
+      "fonte": "Portal Contabeis",
+      "hora_postada": "09/06/2026 21:00",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMVpJRkFpVUt6SDNFQU9qb08zMm5fc2dmUnNBaU5OSklad1l0NlZreS1hZnFRVUtQT0ozTGNrRndYVndsQXQxZ2N3ZTFUOTVGQWxWckRPYzRCLURodERnYXhDcHlTbUktekJQb050d2c3WTJZNi1qbG9rUGZrMDVGcXV1R1hmd19HOFhJUTlUcFlkU2YtejVuOTgxb3U2aEhuVEtlS1FtMVVGSnM?oc=5"
+    },
     {
       "titulo": "Reforma tributária concentrará produção em Manaus - Valor Econômico",
       "resumo": "Reforma tributária concentrará produção em Manaus Valor Econômico",
@@ -10,18 +24,11 @@
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQ01ETlh4dzN1UGplVjdwOExrcGtabVRKYnVWeDh5NVhCUjBKMTJ0YVFYZk1QQU1hTUl4ZWpIRnlwU1pYNVMwWi1ROU05ZDNXMG9XaFVmT3BvdUlwWER1Z3lvNzNOekNwMTFjTjY4VHlkRW5ZelZ1dHlOaHlTSUxhQmtGcDI0dDZzZUc5cGFvc0tMbVphQ1RVR0NKSmJxM1RaSmNZZTZhR1FPdk3SAboBQVVfeXFMT0NzV2dOWU5lTjAyeUpwT1gtdS1SUDdfTlhtVFJDaVFGZ0lsQlJEOGR1VUR6ZzhhS1pjZnlQYWpqMEM2djF0dXlkVXpVTW05R3BSTWtEUTBlOFZwYjBrYktONC1RVkNPX0xPQnFVc2pPOUtZWndybjNBYXZTR1BHd1RYcHhKaXBJUktxS2dGOFJjcUdKT28tRmM2RzYtWDFqaWhDOHo2aFk2MC00V001bEo5aHFtR281dEFR?oc=5"
     },
     {
-      "titulo": "Por que as empresas precisam estar atentas ao Imposto Seletivo? - Consultor Jurídico",
-      "resumo": "Por que as empresas precisam estar atentas ao Imposto Seletivo? Consultor Jurídico",
-      "fonte": "Consultor Jurídico",
-      "hora_postada": "07/06/2026 15:28",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPT3ZNUDBsTFN2RjE5ZHIwYVctTUp1MkU1ZWVEeWo1dndVNHRrUW5WM2pUTklpd0FUeV9JTDRIdUg0Y2tIdlNlRWx2TWM2Nmh1MzFDZ3V2eTZjamI4bVdGTGlOZjJxNzRfaks0SE94VmtfM3dYU1JtSGFkOVh4VVdpT3RBMVZPa0U1eFRJTUZwV0Z0NWx0TzJPdFRROXFVaFhXQzdZ?oc=5"
-    },
-    {
-      "titulo": "Reforma tributária deve aumentar em 30% empresas na Zona Franca de Manaus - Folha de S.Paulo",
-      "resumo": "Reforma tributária deve aumentar em 30% empresas na Zona Franca de Manaus Folha de S.Paulo",
-      "fonte": "Folha de S.Paulo",
-      "hora_postada": "07/06/2026 15:00",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMm5QNGEzcDJCVEpBMEt4LV9zTXVPM1RYV3hVdWVQaHhIRmYyQXBDbUxucXVrUVVkVWJaOS1xQ05wYVgtU0VUbG54ZXpFMmpvOWptQzJvcXVkVEVLLXpud0tZSFFZUkhBV0pBaVp3MnF4WUR3c2IxdERUWDAxaHk5enRzN1ppSDVOUnJ3ZGJnUEpZNF9UT21wdTd5WnZ5dU85S0NzMWYyVHdFelRWaFg0aDhBSTg5WkFrNGNvejItV2tOQQ?oc=5"
+      "titulo": "Reforma tributária: maioria das empresas da construção está se preparando, mas muitas ainda não veem benefícios - FGV Ibre",
+      "resumo": "Reforma tributária: maioria das empresas da construção está se preparando, mas muitas ainda não veem benefícios FGV Ibre",
+      "fonte": "FGV Ibre",
+      "hora_postada": "10/06/2026 09:27",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPSnJWMV9XMVVSUG1VQkRHeHZSOFJ5WFBmaXZRRVVVdlJ5VFRiWVdVc0JUUkhyUFg3Wm5LTllCQ3BBNDl0Vk03U2dNN0J6VTB5TXgwY2gyaDdNTW5vSkdZdVBOMUxReWV0ekFZdFVuMVEzTnZXVlVwSkIwdVl1UDhNMGtSWUpTRkx5ckZIRHZRTkNWNUxfYlRZWTdrNS1KZlViYXFKTFo1MmUyU1RFbzR0dndBUjFaczVIbm9nUkJWSkc2dw?oc=5"
     },
     {
       "titulo": "Reforma Tributária e impactos para empresas em debate em Porto Alegre - Jornal do Comércio",
@@ -31,18 +38,11 @@
       "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNZjUzbWJCdUtoM1A3aHYzZmJCSzdYV3k0Sml3LWtsR2hpcUU0Qm45LWhfalloaExwTTRMQlVfNWc3OFRvVlgtaE5aLTdqY0hESy1NLXVWOGg0dVJWRDlSWURDaVR2bHphSzN5TWhvck9YS1VteXY4eHdXdVlOSzZYYmVUdC1NOHpyS1I2aHA5eF84dkI3WlVsMUJNZnpSRWlKbFdrQ0FZT3hRZjFBRF9NUzNLRzYyQkZKSU9xVUVpLVJaM0sxTjJsVFAtT2ZMd1VYMGpLMkhTR2w?oc=5"
     },
     {
-      "titulo": "Alterações trazidas pela reforma tributária pressionam empresas a revisar contratos - liberal.com.br",
-      "resumo": "Alterações trazidas pela reforma tributária pressionam empresas a revisar contratos liberal.com.br",
-      "fonte": "liberal.com.br",
-      "hora_postada": "08/06/2026 08:14",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbUhSWlpzVmQ5SmdFcnhnb1NSN3JOU2xCc29yV1JmZWVlVjVpTUNzX1FvSzRSVVd1MVB5bUZhNEV0NlN4QjFzN3A3UFVmQ2dVaUhPTHRMWHYxWERMTmZuUW1tZlMyMXBlYW9WaEU1MjFqdG5nVS1VTTZwOW9TMm8tbTlrNXVSNFRmUDRCM2ltLTc2MjZERXphOVZGSXhDVFNUMzg1R2diWnBySF95ejRPTnFtQUpUQmFvWmNlX1pxUHJHcXktNl9hUUpn?oc=5"
-    },
-    {
-      "titulo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas - Portal Contabeis",
-      "resumo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas Portal Contabeis",
-      "fonte": "Portal Contabeis",
-      "hora_postada": "30/05/2026 04:00",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQR240Uk1EZ1ZyN0d3QnVkYzVvbkc3VW11NWdMaUJza3V3a0Iwc00xaHh4Z1B1YUdKMHBTRWlSM01RWFRrWmhJTkZ0V1R6SnJnV3lFakoxVmRuMjZaMnZqZHh4YWowSmlIalRmQ1V0M1NUbmxodmFZWFBsMTM0RUEzOTVwZnlxM04yZWdFUGo4YzR2akxic1F1eW8zdnVGY0RnTm56QXQxel80UkxnQmRtYWtRRWk3UQ?oc=5"
+      "titulo": "Reforma tributária deve aumentar em 30% empresas na Zona Franca de Manaus - Folha de S.Paulo",
+      "resumo": "Reforma tributária deve aumentar em 30% empresas na Zona Franca de Manaus Folha de S.Paulo",
+      "fonte": "Folha de S.Paulo",
+      "hora_postada": "07/06/2026 15:00",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMm5QNGEzcDJCVEpBMEt4LV9zTXVPM1RYV3hVdWVQaHhIRmYyQXBDbUxucXVrUVVkVWJaOS1xQ05wYVgtU0VUbG54ZXpFMmpvOWptQzJvcXVkVEVLLXpud0tZSFFZUkhBV0pBaVp3MnF4WUR3c2IxdERUWDAxaHk5enRzN1ppSDVOUnJ3ZGJnUEpZNF9UT21wdTd5WnZ5dU85S0NzMWYyVHdFelRWaFg0aDhBSTg5WkFrNGNvejItV2tOQQ?oc=5"
     }
   ]
 }

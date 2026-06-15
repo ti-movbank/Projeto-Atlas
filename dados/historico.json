@@ -1,48 +1,4 @@
 {
-  "2026-06-08": [
-    {
-      "titulo": "Por que as empresas precisam estar atentas ao Imposto Seletivo? - Consultor Jurídico",
-      "resumo": "Por que as empresas precisam estar atentas ao Imposto Seletivo? Consultor Jurídico",
-      "fonte": "Consultor Jurídico",
-      "hora_postada": "07/06/2026 15:28",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPT3ZNUDBsTFN2RjE5ZHIwYVctTUp1MkU1ZWVEeWo1dndVNHRrUW5WM2pUTklpd0FUeV9JTDRIdUg0Y2tIdlNlRWx2TWM2Nmh1MzFDZ3V2eTZjamI4bVdGTGlOZjJxNzRfaks0SE94VmtfM3dYU1JtSGFkOVh4VVdpT3RBMVZPa0U1eFRJTUZwV0Z0NWx0TzJPdFRROXFVaFhXQzdZ?oc=5"
-    },
-    {
-      "titulo": "Reforma tributária deve aumentar em 30% empresas na Zona Franca de Manaus - Folha de S.Paulo",
-      "resumo": "Reforma tributária deve aumentar em 30% empresas na Zona Franca de Manaus Folha de S.Paulo",
-      "fonte": "Folha de S.Paulo",
-      "hora_postada": "07/06/2026 15:00",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMm5QNGEzcDJCVEpBMEt4LV9zTXVPM1RYV3hVdWVQaHhIRmYyQXBDbUxucXVrUVVkVWJaOS1xQ05wYVgtU0VUbG54ZXpFMmpvOWptQzJvcXVkVEVLLXpud0tZSFFZUkhBV0pBaVp3MnF4WUR3c2IxdERUWDAxaHk5enRzN1ppSDVOUnJ3ZGJnUEpZNF9UT21wdTd5WnZ5dU85S0NzMWYyVHdFelRWaFg0aDhBSTg5WkFrNGNvejItV2tOQQ?oc=5"
-    },
-    {
-      "titulo": "Qual o impacto da Reforma Tributária na Construção Civil? - Senior Sistemas",
-      "resumo": "Qual o impacto da Reforma Tributária na Construção Civil? Senior Sistemas",
-      "fonte": "Senior Sistemas",
-      "hora_postada": "04/06/2026 04:00",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5mQlV3WDZEZFZtc0xYMjhwVUZYLTVHLVdHejVKdXNLV01Jck00TjRqbXl4T01SU0lxQ3k4ZU52aWRHblhaTURwaDVOaHA1b2NCZkh4WTBjbDN6NDZFeVA2SjhPWVptUkJVYXlkcXhHaGU?oc=5"
-    },
-    {
-      "titulo": "Multas da reforma tributária ampliam pressão sobre empresas - Capital Aberto",
-      "resumo": "Multas da reforma tributária ampliam pressão sobre empresas Capital Aberto",
-      "fonte": "Capital Aberto",
-      "hora_postada": "05/06/2026 10:00",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObG1WU3ppT2NFVU1DTW1HdG1CTHVSS0ZFQVFwYjZzbWt4NEVtTmdyRHFtZnFsVERFRkhpZFdRT2Y0blBmMnZkOHJHeHRIMHNkLVllYnlOY3BHQXlaNjdwV1kxTlY2WGxXZHhIMTVfbl9uMTdBbHdrbkxTYk5md2M0N2w1WFZ2NGU4dWQwSWVGWE95ai1CbUZURFlkM2hhUEFEN2s0?oc=5"
-    },
-    {
-      "titulo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas - Portal Contabeis",
-      "resumo": "Reforma Tributária: 10 regras que exigem ajustes imediatos nas empresas Portal Contabeis",
-      "fonte": "Portal Contabeis",
-      "hora_postada": "30/05/2026 04:00",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQR240Uk1EZ1ZyN0d3QnVkYzVvbkc3VW11NWdMaUJza3V3a0Iwc00xaHh4Z1B1YUdKMHBTRWlSM01RWFRrWmhJTkZ0V1R6SnJnV3lFakoxVmRuMjZaMnZqZHh4YWowSmlIalRmQ1V0M1NUbmxodmFZWFBsMTM0RUEzOTVwZnlxM04yZWdFUGo4YzR2akxic1F1eW8zdnVGY0RnTm56QXQxel80UkxnQmRtYWtRRWk3UQ?oc=5"
-    },
-    {
-      "titulo": "Reforma tributária obriga empresas a reverem estratégias para além dos impostos - Conselho Regional de Contabilidade do Maranhão",
-      "resumo": "Reforma tributária obriga empresas a reverem estratégias para além dos impostos Conselho Regional de Contabilidade do Maranhão",
-      "fonte": "Conselho Regional de Contabilidade do Maranhão",
-      "hora_postada": "02/06/2026 13:33",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUkRpaHI0QnVqMkI2MmZBNU9VYU9ZMTBCVUM5YmtmM2pBTzRXYjliYU16VENwVUpwcG9RRHE2czhvUUtvMFZqZDVhUnJRcm84Qm81T1BodEpDRm5HY1NzTHpURE5vSzI0VEVGZnh4NlpCQ2pvajNGcnJLRnVzQjJQd2E2SzlWV1JUaWsxcFdQVndWdV8zTUJrU3NUWV9FNGRkOE50bE94S3ZTOEIyclE?oc=5"
-    }
-  ],
   "2026-06-09": [
     {
       "titulo": "Reforma tributária: o que sua empresa deve fazer - ES Brasil",
@@ -305,6 +261,50 @@
       "fonte": "Contadores.cnt.br",
       "hora_postada": "11/06/2026 09:35",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQQVBjbkZsbXNhM1c4TTFfMDBtUkMydDN2dnkzM1pRU0UyUUp5YmJsMGpUd2xvc3F1M1kzQ2dJemJqZzNUOFBneXlNUmZpWHFiX1pZcmVVOER5c2hfdmNuSzFGOXAwUkl3d0Y1NU16N2NFa2hZSklvUXJvN1JLTVlPR3N0VnFhdEFYV2FMUmFaWFR1MU9ZMERnM0Mta3BRX3RmME10MHE1TjQwZVc5eU9XanA1YXJBVTJYenVHYXBvT3M4TW04YmU3cXpLa2g?oc=5"
+    }
+  ],
+  "2026-06-15": [
+    {
+      "titulo": "Reforma Tributária: empresas pequenas e médias terão carga maior - Portal Contabeis",
+      "resumo": "Reforma Tributária: empresas pequenas e médias terão carga maior Portal Contabeis",
+      "fonte": "Portal Contabeis",
+      "hora_postada": "09/06/2026 21:00",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMVpJRkFpVUt6SDNFQU9qb08zMm5fc2dmUnNBaU5OSklad1l0NlZreS1hZnFRVUtQT0ozTGNrRndYVndsQXQxZ2N3ZTFUOTVGQWxWckRPYzRCLURodERnYXhDcHlTbUktekJQb050d2c3WTJZNi1qbG9rUGZrMDVGcXV1R1hmd19HOFhJUTlUcFlkU2YtejVuOTgxb3U2aEhuVEtlS1FtMVVGSnM?oc=5"
+    },
+    {
+      "titulo": "Reforma Tributária: o que as médias empresas precisam fazer agora para não serem pegas de surpresa em 2027 - FECAP",
+      "resumo": "Reforma Tributária: o que as médias empresas precisam fazer agora para não serem pegas de surpresa em 2027 FECAP",
+      "fonte": "FECAP",
+      "hora_postada": "12/06/2026 19:18",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQN0Z5bGRSc3lPREdJbTN1SXQ5YW1ld3gwa25UUWJGSHAyMGY3YktKdkJrX3NrTVJJRVRiakpBOFVfcThxeHpVNHdLNXp4Zm44eUxlNHdGUTRFWlF5YkhlVkJYeGR4TEtsaVdNaGZVU3VUZU9Id0g3N3lJVURGVURoMHRoMHJuTVNyeWhoN01jOE5vUHVRcm11YjlGSWhXTnhEMHZkaFA4WVZKTFlsLUVIUkNsXzEwckF3LW5uZ0dwYWJFa3ZqN0p1TVVMTmtaSU9QT01nWQ?oc=5"
+    },
+    {
+      "titulo": "Reforma tributária cria prazo para empresas modernizarem sistemas ou enfrentarem bloqueios fiscais - CartaCapital",
+      "resumo": "Reforma tributária cria prazo para empresas modernizarem sistemas ou enfrentarem bloqueios fiscais CartaCapital",
+      "fonte": "CartaCapital",
+      "hora_postada": "14/06/2026 09:00",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUmtXQWNZNVlObGVkSTdzWG9tQUMzd2RlVlBKSFMwXzliY0dYUWZCTlZiZk9nVlNNRFRxNFkxYjhXYndCUjZWUnB1R2dMOUQzRmFtODEzU1lHZzBvWVE1M1J3emdqLVo5WVA1Y1dWY3dwY1A4aTQ3blIxOGpkcWhXZ2hCc3NhV1p0aTBaR1Rub2FiZENUa0NpOURhcnZBeV9fcHBQWE9qTjROdFEtd2xFRk5GRnNfSzZ2?oc=5"
+    },
+    {
+      "titulo": "Classificação fiscal será estratégica para empresas na reforma tributária - Monitor Mercantil",
+      "resumo": "Classificação fiscal será estratégica para empresas na reforma tributária Monitor Mercantil",
+      "fonte": "Monitor Mercantil",
+      "hora_postada": "11/06/2026 22:13",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNNFRRTFllSWFnTTd0Smh1bUNYdzFUQzZvVXJmdF90QXZYVVNKQnhncXFhSS1zbGtLbVBvV3U5Mm1ZOFV0WF9UeUZJZERpRk1xN1I1MEpBcWIxT2ZlRlo2cmJXN1dVWU5yYjR4U1FlNFhnS0M1S0pZUlZud0kxSUxtbjdCN0RvQzgxaUNuejZDNUIzYWpBaHlYTnZHY2tJZUx3dGtubHVNMWVBdw?oc=5"
+    },
+    {
+      "titulo": "Reforma tributária concentrará produção em Manaus - Valor Econômico",
+      "resumo": "Reforma tributária concentrará produção em Manaus Valor Econômico",
+      "fonte": "Valor Econômico",
+      "hora_postada": "10/06/2026 05:01",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQ01ETlh4dzN1UGplVjdwOExrcGtabVRKYnVWeDh5NVhCUjBKMTJ0YVFYZk1QQU1hTUl4ZWpIRnlwU1pYNVMwWi1ROU05ZDNXMG9XaFVmT3BvdUlwWER1Z3lvNzNOekNwMTFjTjY4VHlkRW5ZelZ1dHlOaHlTSUxhQmtGcDI0dDZzZUc5cGFvc0tMbVphQ1RVR0NKSmJxM1RaSmNZZTZhR1FPdk3SAboBQVVfeXFMT0NzV2dOWU5lTjAyeUpwT1gtdS1SUDdfTlhtVFJDaVFGZ0lsQlJEOGR1VUR6ZzhhS1pjZnlQYWpqMEM2djF0dXlkVXpVTW05R3BSTWtEUTBlOFZwYjBrYktONC1RVkNPX0xPQnFVc2pPOUtZWndybjNBYXZTR1BHd1RYcHhKaXBJUktxS2dGOFJjcUdKT28tRmM2RzYtWDFqaWhDOHo2aFk2MC00V001bEo5aHFtR281dEFR?oc=5"
+    },
+    {
+      "titulo": "Reforma tributária: maioria das empresas da construção está se preparando, mas muitas ainda não veem benefícios - FGV Ibre",
+      "resumo": "Reforma tributária: maioria das empresas da construção está se preparando, mas muitas ainda não veem benefícios FGV Ibre",
+      "fonte": "FGV Ibre",
+      "hora_postada": "10/06/2026 09:00",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPSnJWMV9XMVVSUG1VQkRHeHZSOFJ5WFBmaXZRRVVVdlJ5VFRiWVdVc0JUUkhyUFg3Wm5LTllCQ3BBNDl0Vk03U2dNN0J6VTB5TXgwY2gyaDdNTW5vSkdZdVBOMUxReWV0ekFZdFVuMVEzTnZXVlVwSkIwdVl1UDhNMGtSWUpTRkx5ckZIRHZRTkNWNUxfYlRZWTdrNS1KZlViYXFKTFo1MmUyU1RFbzR0dndBUjFaczVIbm9nUkJWSkc2dw?oc=5"
     }
   ]
 }
